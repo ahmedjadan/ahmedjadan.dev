@@ -1,0 +1,23 @@
+{
+  "greeting": "Hey 👋,  I am Ahmed Ja'dan",
+  "bio": "Self-taught front-end web developer, creating websites using JavaScript, React, Nextjs, and tailwindcss.",
+  "blog": "Writing",
+  "blogSub": "Latest blogs, where I document my learning journey, From programming to hobbies and travel, digital currencies and the world of blockchain, hope you like it.",
+  "more": "Read more",
+  "all": "All Posts",
+  "search": "Search articles",
+  "comment": "Load Comments",
+  "pub": "Published",
+  "authors": "Authors",
+  "name": "Ahmed Ja'dan",
+  "back": "Back to the blog",
+  "twitter": "Discuss on Twitter",
+  "github": "View on GitHub",
+  "featured_posts": "Featured Blogs",
+  "portfolio": "Portfolio",
+  "portfolio_sub": "List of my side projects",
+  "reading_time": "mins read",
+  "currently": "Currently",
+  "posts": "Posts",
+  "repoTitle": "Pinned Repositories"
+}

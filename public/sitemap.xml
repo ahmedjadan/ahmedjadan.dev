@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+      http://www.w3.org/1999/xhtml
+      http://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd"
+>
+  <url>
+    <loc>https://i18next.vercel.app/404</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://i18next.vercel.app/404"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="https://i18next.vercel.app/ar/404"
+    />
+  </url>
+
+  <url>
+    <loc>https://i18next.vercel.app/about</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://i18next.vercel.app/about"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="https://i18next.vercel.app/ar/about"
+    />
+  </url>
+
+  <url>
+    <loc>https://i18next.vercel.app/blog</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://i18next.vercel.app/blog"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="https://i18next.vercel.app/ar/blog"
+    />
+  </url>
+
+  <url>
+    <loc>https://i18next.vercel.app/contact</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://i18next.vercel.app/contact"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="https://i18next.vercel.app/ar/contact"
+    />
+  </url>
+
+  <url>
+    <loc>https://i18next.vercel.app/index</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://i18next.vercel.app/index"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="https://i18next.vercel.app/ar/index"
+    />
+  </url>
+
+  <url>
+    <loc>https://i18next.vercel.app/snippets</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://i18next.vercel.app/snippets"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="https://i18next.vercel.app/ar/snippets"
+    />
+  </url>
+
+  <url>
+    <loc>https://i18next.vercel.app/blog/first-post</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="https://i18next.vercel.app/ar/blog/first-post"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://i18next.vercel.app/blog/first-post"
+    />
+  </url>
+
+  <url>
+    <loc>https://i18next.vercel.app/blog/how-markdoun</loc>
+  </url>
+
+  <url>
+    <loc>https://i18next.vercel.app/ar/blog/how-to-nextjs</loc>
+  </url>
+
+  <url>
+    <loc>https://i18next.vercel.app/blog/how-to-react</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="https://i18next.vercel.app/ar/blog/how-to-react"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://i18next.vercel.app/blog/how-to-react"
+    />
+  </url>
+
+  <url>
+    <loc>https://i18next.vercel.app/blog/new-text</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="https://i18next.vercel.app/ar/blog/new-text"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://i18next.vercel.app/blog/new-text"
+    />
+  </url>
+
+  <url>
+    <loc>https://i18next.vercel.app/ar/blog/second-blog</loc>
+  </url>
+
+  <url>
+    <loc>https://i18next.vercel.app/blog/style-guides</loc>
+  </url>
+</urlset>

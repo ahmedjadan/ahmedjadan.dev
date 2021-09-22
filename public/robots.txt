@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://i18next.vercel.app/sitemap.xml

@@ -1,0 +1,59 @@
+---
+title: سلسلة تعليم Reactjs
+name: أحمد جعدان
+image: '/ahmed.jpg'
+slug: how-to-react
+banner: '/static/images/banner/keyboard.jpg'
+icon: ''
+summary: المدونة الاولى هنا على هذا الموقع
+publishedAt: '2021-04-15'
+tag1: 'Strapi'
+tag2: 'Sanity.io'
+ogImage: '/static/images/banner/keyboard.jpg'
+dataBlur: ''
+hero: blue
+featured: true
+---
+
+```jsx
+//mdx file
+export async function getFileBySlug(type, slug, otherLocale = '') {
+  const [mdxPath, mdPath] =
+    otherLocale === ''
+      ? [
+          path.join(root, 'data', type, `${slug}.mdx`),
+          path.join(root, 'data', type, `${slug}.md`),
+        ]
+      : [
+          path.join(root, 'data', type, `${slug}.${otherLocale}.mdx`),
+          path.join(root, 'data', type, `${slug}.${otherLocale}.md`),
+        ];
+
+  const source = fs.existsSync(mdxPath)
+    ? fs.readFileSync(mdxPath, 'utf8')
+    : fs.readFileSync(mdPath, 'utf8');
+
+  const { data, content } = matter(source);
+  const mdxContent = await renderToString(content, {
+    components: MDXComponents,
+    mdxOptions: {
+      remarkPlugins: [
+        require('remark-autolink-headings'),
+        require('remark-slug'),
+        require('remark-code-titles'),
+      ],
+      rehypePlugins: [mdxPrism],
+    },
+  });
+  //console.log('data', data);
+  return {
+    mdxContent,
+    frontMatter: {
+      wordCount: content.split(/\s+/gu).length,
+      readingTime: readingTime(content),
+      slug: slug || null,
+      ...data,
+    },
+  };
+}
+```
