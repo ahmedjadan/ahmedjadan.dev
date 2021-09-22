@@ -16,8 +16,7 @@ import PostCard from '/src/components/PostCard';
 import ProjectCard from '/src/components/ProjectCard';
 import FeaturedPost from '/src/components/FeaturedPost';
 import Repos from '/src/components/Repos';
-export default function Home({ posts, pinnedItems }) {
-  console.log("Home ~ pinnedItems", pinnedItems)
+export default function Home({ posts }) {
   const { t } = useTranslation();
 
   const router = useRouter();
@@ -87,7 +86,6 @@ export async function getStaticProps({ locale, defaultLocale, locales }) {
   return {
     props: {
       posts,
-      pinnedItems
     },
     revalidate: 2
   };
