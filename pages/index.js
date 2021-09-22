@@ -1,11 +1,6 @@
-import {
-  ApolloClient,
-  InMemoryCache,
-  gql,
-  createHttpLink
-} from "@apollo/client";
-import { setContext } from '@apollo/client/link/context';
-// import { client, query } from '/lib/ApolloClient';
+
+import useSWR from 'swr';
+import axios from 'axios';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import { getAllFilesFrontMatter } from '../lib/mdx';
@@ -17,9 +12,13 @@ import ProjectCard from '/src/components/ProjectCard';
 import FeaturedPost from '/src/components/FeaturedPost';
 import Repos from '/src/components/Repos';
 
+const fetcher = url => axios.get(url).then(res => res.data)
 
-export default function Home({ posts, pinnedItems }) {
-  console.log("Home ~ pinnedItems", pinnedItems)
+export default function Home({ posts }) {
+
+  const { data, error } = useSWR('/api/github/repos', fetcher);
+  const pinnedItems = data?.viewer?.pinnedItems?.edges?.map(({ node }) => node)
+
   const { t } = useTranslation();
 
   const router = useRouter();
@@ -63,7 +62,7 @@ export default function Home({ posts, pinnedItems }) {
           <h1 className="text-lg font-bold text-indigo-500" >{t('common:repoTitle')} </h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3  gap-4">
-          {pinnedItems.map((item, idx) => (
+          {pinnedItems?.map((item, idx) => (
             <Repos item={item} key={idx} />
           ))}
         </div>
@@ -76,80 +75,13 @@ export default function Home({ posts, pinnedItems }) {
 
 
 export async function getStaticProps({ locale, defaultLocale, locales }) {
-  const httpLink = createHttpLink({
-    uri: 'https://api.github.com/graphql',
-  });
 
-  const authLink = setContext((_, { headers }) => {
-    return {
-      headers: {
-        ...headers,
-        authorization: `Bearer ${process.env.GITHUB_TOKEN}`
-      }
-    }
-  });
-
-  const client = new ApolloClient({
-    link: authLink.concat(httpLink),
-    cache: new InMemoryCache()
-  });
-
-  const { data } = await client.query({
-    query: gql`
-  
-{
-      viewer {
-        login
-        pinnedItems(first: 6) {
-          totalCount
-          edges {
-            node {
-              ... on Repository {
-                id
-                description
-                name
-                url
-                stargazerCount
-                stargazers {
-                  totalCount
-                }
-                forkCount
-                primaryLanguage {
-                  name
-                  color
-                }
-                pushedAt
-                languages(first: 3) {
-                  edges {
-                    node {
-                      color
-                      name
-                    }
-                  }
-                  nodes {
-                    color
-                    name
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `
-  })
-  // const { data } = await client.query({
-  //   query: query
-  // })
-  const { viewer } = data
-  const pinnedItems = viewer?.pinnedItems.edges.map(({ node }) => node)
   const otherLocale = locale !== defaultLocale ? locale : 'en';
   const posts = await getAllFilesFrontMatter('blog', otherLocale);
 
   return {
     props: {
-      posts, pinnedItems
+      posts
     },
     revalidate: 10
   };

@@ -1,8 +1,24 @@
 import Link from 'next/link';
 import { VscRepo, } from 'react-icons/vsc'
 import { GoRepoForked } from 'react-icons/go'
+import useSWR from 'swr';
+import axios from 'axios';
+
+
+// const fetcher = url => axios.get(url).then((res) => {
+//   if (!res.ok) {
+//     throw new Error(res.statusText)
+//   }
+//   return res.json()
+// })
+// const fetcher = url =>
+//   fetch(url).then((r) => {
+//     return r.json();
+//   })
+const fetcher = url => axios.get(url).then(res => res.data)
 
 export default function Repos({ item: { name, description, primaryLanguage, stargazerCount, forkCount, url, languages } }) {
+ 
 
   return (
     <Link href={url}>
