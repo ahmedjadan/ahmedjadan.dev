@@ -56,7 +56,7 @@ export default function Home({ posts, pinnedItems }) {
           </div>
         </div>
       </div>
-      <div className="mx-auto px-2 py-10 max-w-5xl ">
+      {/* <div className="mx-auto px-2 py-10 max-w-5xl ">
         <div className="py-3 ">
           <h1 className="text-lg font-bold text-indigo-500" >{t('common:repoTitle')} </h1>
         </div>
@@ -65,7 +65,7 @@ export default function Home({ posts, pinnedItems }) {
             <Repos item={item} key={idx} />
           ))}
         </div>
-      </div>
+      </div> */}
       <ProjectCard />
     </Layout>
   );
@@ -75,12 +75,12 @@ export default function Home({ posts, pinnedItems }) {
 
 export async function getStaticProps({ locale, defaultLocale, locales }) {
 
-  const { data } = await client.query({
-    query: query
-  })
-  const { viewer } = data
-  const pinnedItems = viewer?.pinnedItems.edges.map(({ node }) => node)
-  console.log("getStaticProps ~ pinnedItems", pinnedItems)
+  // const { data } = await client.query({
+  //   query: query
+  // })
+  // const { viewer } = data
+  // const pinnedItems = viewer?.pinnedItems.edges.map(({ node }) => node)
+  // console.log("getStaticProps ~ pinnedItems", pinnedItems)
   const otherLocale = locale !== defaultLocale ? locale : 'en';
   const posts = await getAllFilesFrontMatter('blog', otherLocale);
 
