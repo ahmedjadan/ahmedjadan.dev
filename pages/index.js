@@ -81,8 +81,6 @@ export async function getStaticProps({ locale, defaultLocale, locales }) {
   });
 
   const authLink = setContext((_, { headers }) => {
-    // get the authentication token from local storage if it exists
-    // return the headers to the context so httpLink can read them
     return {
       headers: {
         ...headers,
@@ -146,7 +144,6 @@ export async function getStaticProps({ locale, defaultLocale, locales }) {
   // })
   const { viewer } = data
   const pinnedItems = viewer?.pinnedItems.edges.map(({ node }) => node)
-  console.log("getStaticProps ~ pinnedItems", pinnedItems)
   const otherLocale = locale !== defaultLocale ? locale : 'en';
   const posts = await getAllFilesFrontMatter('blog', otherLocale);
 
@@ -154,6 +151,6 @@ export async function getStaticProps({ locale, defaultLocale, locales }) {
     props: {
       posts, pinnedItems
     },
-    revalidate: 2
+    revalidate: 10
   };
 }
