@@ -1,28 +1,29 @@
-
+import dynamic from 'next/dynamic'
+import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import axios from 'axios';
-import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import { getAllFilesFrontMatter } from '../lib/mdx';
-import Head from 'src/components/Head';
 import InfoCard from '/src/components/InfoCard';
 import Layout from '/src/Layout/Layout';
-import PostCard from '/src/components/PostCard';
-import ProjectCard from '/src/components/ProjectCard';
-import FeaturedPost from '/src/components/FeaturedPost';
-import Repos from '/src/components/Repos';
+
+const Head = dynamic(() => import('src/components/Head'))
+const FeaturedPost = dynamic(() => import('/src/components/FeaturedPost'))
+const Repos = dynamic(() => import('/src/components/Repos'))
+const ProjectCard = dynamic(() => import('/src/components/ProjectCard'))
+const PostCard = dynamic(() => import('/src/components/PostCard'))
+
 
 const fetcher = url => axios.get(url).then(res => res.data)
 
 export default function Home({ posts }) {
 
-  const { data, error } = useSWR('/api/github/repos', fetcher);
+  const { data } = useSWR('/api/github/repos', fetcher);
   const pinnedItems = data?.viewer?.pinnedItems?.edges?.map(({ node }) => node)
 
   const { t } = useTranslation();
 
   const router = useRouter();
-  const { locale } = router;
   //fillter posts based on date and only render 3 od them THAT NOT FEATURED post
   const sortedBlogs = posts
     .sort(
@@ -31,7 +32,6 @@ export default function Home({ posts }) {
     .filter((p) => p.featured === false)
     .slice(0, 3);
 
-  //getting the featured post
   return (
     <Layout>
       <Head
