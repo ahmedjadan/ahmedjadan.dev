@@ -29,7 +29,7 @@ export const ProjectsData = {
       title: 'This website',
       description: `showcasing and blogging my development journey`,
       stacks: ['Nextjs', 'tailwindcss', 'mdx', 'i18n'],
-      href: 'https://ahmedjadan.vercel.app/',
+      href: 'https://ahmedjadan-dev.vercel.app/',
       image: '/static/images/projects/ahmedjadan.png',
 
     },
@@ -63,7 +63,7 @@ export const ProjectsData = {
       title: 'موقعي الشخصي',
       description: `showcasing and blogging my development journey`,
       stacks: ['Nextjs', 'tailwindcss', 'mdx', 'i18n'],
-      href: 'https://ahmedjadan.vercel.app/',
+      href: 'https://ahmedjadan-dev.vercel.app/',
       image: '/static/images/projects/ahmedjadan.png',
 
     },

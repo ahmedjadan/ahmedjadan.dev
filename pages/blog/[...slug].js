@@ -10,13 +10,8 @@ export default function Blog({ post, allPosts: frontMatter }) {
     components: MDXComponents,
   });
 
-
-
   return <BlogLayout frontMatter={frontMatter}>{contents}</BlogLayout>;
 }
-
-
-
 
 
 export async function getStaticPaths({ locales, defaultLocale, availableLocales }) {

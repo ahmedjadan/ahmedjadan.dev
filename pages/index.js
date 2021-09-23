@@ -1,5 +1,4 @@
 import dynamic from 'next/dynamic'
-import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import axios from 'axios';
 import useTranslation from 'next-translate/useTranslation';
@@ -23,7 +22,6 @@ export default function Home({ posts }) {
 
   const { t } = useTranslation();
 
-  const router = useRouter();
   //fillter posts based on date and only render 3 od them THAT NOT FEATURED post
   const sortedBlogs = posts
     .sort(
@@ -46,8 +44,8 @@ export default function Home({ posts }) {
           {t('common:featured_posts')}
         </h1>
       </div>
-      <div className="max-w-5xl mx-auto  rounded-md ">
-        <div className="mx-auto grid md:grid-cols-6 grid-cols-1 gap-x-10  px-2">
+      <div className="max-w-5xl mx-auto  rounded-md  ">
+        <div className="mx-auto grid md:grid-cols-6 grid-cols-1 gap-x-6 dark:bg-[#2427313d] px-2">
           <FeaturedPost posts={posts} />
           <div className="w-full col-span-3  ">
             {sortedBlogs &&
@@ -58,8 +56,8 @@ export default function Home({ posts }) {
         </div>
       </div>
       <div className="mx-auto px-2 py-10 max-w-5xl ">
-        <div className="py-3 ">
-          <h1 className="text-lg font-bold text-indigo-500" >{t('common:repoTitle')} </h1>
+        <div className="py-4 ">
+          <h1 className="text-lg font-bold text-indigo-500 dark:text-gray-200" >{t('common:repoTitle')} </h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3  gap-4">
           {pinnedItems?.map((item, idx) => (

@@ -12,8 +12,8 @@ export default function ProjectCard({ image, link, title }) {
   return (
     <div className="mx-auto px-2 py-16  max-w-5xl ">
       <div className="py-2 ">
-        <h1 className="text-lg font-bold text-indigo-600" > {t('common:portfolio')} </h1>
-        <p>{t('common:portfolio_sub')} </p>
+        <h1 className="text-lg font-bold text-indigo-600 dark:text-gray-200" > {t('common:portfolio')} </h1>
+        <p className="dark:text-gray-200">{t('common:portfolio_sub')} </p>
       </div>
       <h2 className="sr-only">projects</h2>
 
@@ -21,7 +21,7 @@ export default function ProjectCard({ image, link, title }) {
         {ProjectsData[locale]?.map((project, idx) => (
           <Link href={project.href} key={project.title}>
             <a className=" relative p-2 group" key={project.title}>
-              <div className="grid grid-cols-4 p-1  group-hover:shadow-xl dark:bg-[#24273167] rounded-md bg-gray-100/50  transition duration-200 ease-in-out">
+              <div className="grid grid-cols-4 p-1  group-hover:shadow-xl dark:bg-[#2427313d] rounded-md   transition duration-200 ease-in-out">
                 <div className="col-span-1 h-full w-full ">
                   <Image
                     src={project.image}
@@ -40,7 +40,7 @@ export default function ProjectCard({ image, link, title }) {
                     <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
                   </svg>
                   <h1 className="group-hover:text-indigo-500 text-gray-600 dark:text-gray-200 md:text-lg text-base font-bold md:leading-9  transition duration-300 ease-in-out"> {project.title}</h1>
-                  <p className=" md:text-base text-sm text-gray-600 dark:text-gray-200 py-1 "> {project.description} </p>
+                  <p className=" md:text-base text-sm text-gray-600 dark:text-gray-300 py-1 "> {project.description} </p>
                   <p className="text-gray-600 dark:text-gray-300"> stack:
                     {project.stacks.map((stack, idx) => (
                       <span key={idx} className="dark:bg-[#24273194] text-indigo-400 dark:text-gray-400 text-sm  mx-0.5 px-1 py-[2px] rounded"> {stack.toLowerCase()} </span>

@@ -7,7 +7,7 @@ export default function Repos({ item: { name, description, stargazerCount, forkC
   return (
     <Link href={url} key={id}>
       <a>
-        <div className="  border-[1px] border-gray-400 rounded px-2 py-2 ">
+        <div className="  border-[1px] border-gray-400/50 dark:bg-[#2427313d] bg-gray-100/50 rounded px-2 py-2 ">
           <div className="flex items-center ">
             <VscRepo className="dark:text-gray-200" />
             <h1 className="text-indigo-500 dark:text-indigo-400 space-x-3 px-1 font-semibold"> {name} </h1>
@@ -18,7 +18,7 @@ export default function Repos({ item: { name, description, stargazerCount, forkC
           <div className="flex justify-between">
             <div className="flex items-center">
               {languages.nodes.map((language, idx) => (
-                <div key={idx}>
+                <div key={idx}  className="flex items-center">
                   <div className={`w-3 h-3 rounded-full`} style={{ backgroundColor: language.color }}></div>
                   <p className=" px-2 text-gray-500 text-xs"> {language.name} </p>
                 </div>

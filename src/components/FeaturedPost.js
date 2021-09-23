@@ -9,7 +9,7 @@ export default function FeaturedPost({ posts }) {
     return (
         <>
             <Link href={`blog/${featuredPost?.slug}`}>
-                <a className="grid col-span-3 group p-2">
+                <a className="grid col-span-3 group p-2 ">
                     <div className="grid col-span-2 overflow-hidden">
                         <div className=" bg-cover bg-center h-full w-full object-cover   overflow-hidden">
                             <Image
