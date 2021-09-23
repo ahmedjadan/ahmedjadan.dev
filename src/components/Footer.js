@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useMemo } from 'react';
-import { FaGithub, FaTwitter, FaAngleUp } from 'react-icons/fa';
+import { FaGithub, FaTwitter } from 'react-icons/fa';
 import ScrollTop from './ScrollTop';
 
 export default function Footer() {

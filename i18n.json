@@ -2,7 +2,7 @@
   "locales": ["en", "ar"],
   "defaultLocale": "en",
   "pages": {
-    "*": ["common", "navigation", "404", "SEO"],
+    "*": ["common", "navigation"],
     "/projects": ["projects"]
   }
 }

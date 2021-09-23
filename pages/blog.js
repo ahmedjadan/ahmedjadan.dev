@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { getAllFilesFrontMatter } from '../lib/mdx';
 import Layout from '/src/Layout/Layout';
 import BlogPost from '/src/components/BlogPost';
@@ -7,7 +7,7 @@ import useTranslation from 'next-translate/useTranslation'
 
 
 export default function Blog({ posts }) {
-  const [searchValue, setSearchValue] = useState('');
+  // const [searchValue, setSearchValue] = useState('');
   const { t } = useTranslation()
   const sortedPosts = posts?.sort(
     (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))

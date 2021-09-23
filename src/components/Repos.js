@@ -1,27 +1,11 @@
 import Link from 'next/link';
 import { VscRepo, } from 'react-icons/vsc'
 import { GoRepoForked } from 'react-icons/go'
-import useSWR from 'swr';
-import axios from 'axios';
 
-
-// const fetcher = url => axios.get(url).then((res) => {
-//   if (!res.ok) {
-//     throw new Error(res.statusText)
-//   }
-//   return res.json()
-// })
-// const fetcher = url =>
-//   fetch(url).then((r) => {
-//     return r.json();
-//   })
-const fetcher = url => axios.get(url).then(res => res.data)
-
-export default function Repos({ item: { name, description, primaryLanguage, stargazerCount, forkCount, url, languages } }) {
- 
+export default function Repos({ item: { name, description, stargazerCount, forkCount, url, languages, id } }) {
 
   return (
-    <Link href={url}>
+    <Link href={url} key={id}>
       <a>
         <div className="  border-[1px] border-gray-400 rounded px-2 py-2 ">
           <div className="flex items-center ">
@@ -33,11 +17,11 @@ export default function Repos({ item: { name, description, primaryLanguage, star
           </div>
           <div className="flex justify-between">
             <div className="flex items-center">
-              {languages.nodes.map((language) => (
-                <>
+              {languages.nodes.map((language, idx) => (
+                <div key={idx}>
                   <div className={`w-3 h-3 rounded-full`} style={{ backgroundColor: language.color }}></div>
                   <p className=" px-2 text-gray-500 text-xs"> {language.name} </p>
-                </>
+                </div>
               ))}
             </div>
             <div className="flex items-center  justify-between">

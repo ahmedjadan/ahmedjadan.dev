@@ -2,7 +2,6 @@ import Router from 'next/router';
 import Image from 'next/image';
 import Ahmed from '../../public/ahmed.png';
 import useTranslation from 'next-translate/useTranslation'
-//import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router'
 
 import Nprogress from 'nprogress';
@@ -12,7 +11,6 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Link from 'next/link';
 import Theme from './Theme';
-import LocaleSwitcher from './LocaleSwicher'
 import { navigation } from '/data/navigation';
 Router.onRouteChangeStart = () => Nprogress.start();
 Router.onRouteChangeComplete = () => Nprogress.done();
