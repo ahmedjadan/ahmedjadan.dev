@@ -44,8 +44,6 @@ export default function Repos({ item: { name, description, stargazerCount, forkC
                     </span>
                   </>
                 ) : ''}
-
-
               </div>
             </div>
           </div>

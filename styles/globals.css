@@ -145,9 +145,9 @@ pre[class*='language-'] {
   font-family: Fira Code, Menlo, Monaco, Consolas, Andale Mono, Courier New,
     monospace;
   background-color: rgba(142, 129, 241, 0.15);
-  border: 0.5px solid #9488f2;
+  /* border: 0.5px solid #9488f2; */
   color: rgba(142, 129, 241, 0.89);
-  padding: 0px 1px;
+  /* padding: 0px 1px; */
   font-size: 75%;
 }
 /* Inline code */

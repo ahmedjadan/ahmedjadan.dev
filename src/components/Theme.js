@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router'
 
-export default function Theme({ onclick }) {
+export default function Theme() {
   const router = useRouter()
   const { locales, locale: activeLocale } = router
   const otherLocales = locales.filter((locale) => locale !== activeLocale)
