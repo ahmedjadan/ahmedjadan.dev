@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://i18next.vercel.app/sitemap.xml
+Sitemap: https://ahmedjadan-dev.vercel.app/sitemap.xml

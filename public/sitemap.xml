@@ -9,144 +9,118 @@
       http://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd"
 >
   <url>
-    <loc>https://i18next.vercel.app/404</loc>
+    <loc>https://ahmedjadan-dev.vercel.app/404</loc>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://i18next.vercel.app/404"
+      href="https://ahmedjadan-dev.vercel.app/404"
     />
     <xhtml:link
       rel="alternate"
       hreflang="ar"
-      href="https://i18next.vercel.app/ar/404"
+      href="https://ahmedjadan-dev.vercel.app/ar/404"
     />
   </url>
 
   <url>
-    <loc>https://i18next.vercel.app/about</loc>
+    <loc>https://ahmedjadan-dev.vercel.app/about</loc>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://i18next.vercel.app/about"
+      href="https://ahmedjadan-dev.vercel.app/about"
     />
     <xhtml:link
       rel="alternate"
       hreflang="ar"
-      href="https://i18next.vercel.app/ar/about"
+      href="https://ahmedjadan-dev.vercel.app/ar/about"
     />
   </url>
 
   <url>
-    <loc>https://i18next.vercel.app/blog</loc>
+    <loc>https://ahmedjadan-dev.vercel.app/blog</loc>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://i18next.vercel.app/blog"
+      href="https://ahmedjadan-dev.vercel.app/blog"
     />
     <xhtml:link
       rel="alternate"
       hreflang="ar"
-      href="https://i18next.vercel.app/ar/blog"
+      href="https://ahmedjadan-dev.vercel.app/ar/blog"
     />
   </url>
 
   <url>
-    <loc>https://i18next.vercel.app/contact</loc>
+    <loc>https://ahmedjadan-dev.vercel.app/contact</loc>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://i18next.vercel.app/contact"
+      href="https://ahmedjadan-dev.vercel.app/contact"
     />
     <xhtml:link
       rel="alternate"
       hreflang="ar"
-      href="https://i18next.vercel.app/ar/contact"
+      href="https://ahmedjadan-dev.vercel.app/ar/contact"
     />
   </url>
 
   <url>
-    <loc>https://i18next.vercel.app/index</loc>
+    <loc>https://ahmedjadan-dev.vercel.app/index</loc>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://i18next.vercel.app/index"
+      href="https://ahmedjadan-dev.vercel.app/index"
     />
     <xhtml:link
       rel="alternate"
       hreflang="ar"
-      href="https://i18next.vercel.app/ar/index"
+      href="https://ahmedjadan-dev.vercel.app/ar/index"
     />
   </url>
 
   <url>
-    <loc>https://i18next.vercel.app/snippets</loc>
+    <loc>https://ahmedjadan-dev.vercel.app/snippets</loc>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://i18next.vercel.app/snippets"
+      href="https://ahmedjadan-dev.vercel.app/snippets"
     />
     <xhtml:link
       rel="alternate"
       hreflang="ar"
-      href="https://i18next.vercel.app/ar/snippets"
+      href="https://ahmedjadan-dev.vercel.app/ar/snippets"
     />
   </url>
 
   <url>
-    <loc>https://i18next.vercel.app/blog/first-post</loc>
+    <loc>https://ahmedjadan-dev.vercel.app/blog/hello-world</loc>
     <xhtml:link
       rel="alternate"
       hreflang="ar"
-      href="https://i18next.vercel.app/ar/blog/first-post"
+      href="https://ahmedjadan-dev.vercel.app/ar/blog/hello-world"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://i18next.vercel.app/blog/first-post"
+      href="https://ahmedjadan-dev.vercel.app/blog/hello-world"
     />
   </url>
 
   <url>
-    <loc>https://i18next.vercel.app/blog/how-markdoun</loc>
+    <loc>https://ahmedjadan-dev.vercel.app/blog/how-markdoun</loc>
   </url>
 
   <url>
-    <loc>https://i18next.vercel.app/ar/blog/how-to-nextjs</loc>
-  </url>
-
-  <url>
-    <loc>https://i18next.vercel.app/blog/how-to-react</loc>
+    <loc>https://ahmedjadan-dev.vercel.app/blog/how-to-react</loc>
     <xhtml:link
       rel="alternate"
       hreflang="ar"
-      href="https://i18next.vercel.app/ar/blog/how-to-react"
+      href="https://ahmedjadan-dev.vercel.app/ar/blog/how-to-react"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://i18next.vercel.app/blog/how-to-react"
+      href="https://ahmedjadan-dev.vercel.app/blog/how-to-react"
     />
-  </url>
-
-  <url>
-    <loc>https://i18next.vercel.app/blog/new-text</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://i18next.vercel.app/ar/blog/new-text"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://i18next.vercel.app/blog/new-text"
-    />
-  </url>
-
-  <url>
-    <loc>https://i18next.vercel.app/ar/blog/second-blog</loc>
-  </url>
-
-  <url>
-    <loc>https://i18next.vercel.app/blog/style-guides</loc>
   </url>
 </urlset>

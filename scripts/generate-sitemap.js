@@ -54,7 +54,7 @@ const i18nConfig = require('../i18n.json')
     // if (siteMetadata.siteUrl[siteMetadata.siteUrl.length - 1] == '/') {
     //   console.error("/!\\: siteUrl in siteMetadata has an '/' at the end. Please remove it.")
     // }
-    const siteUrl = 'https://i18next.vercel.app'
+    const siteUrl = 'https://ahmedjadan-dev.vercel.app'
 
     const sitemap = `
   <?xml version="1.0" encoding="UTF-8"?>

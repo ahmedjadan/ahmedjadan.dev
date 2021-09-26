@@ -1,6 +1,7 @@
 import { parseISO, format } from 'date-fns';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import Layout from './Layout';
 import Head from 'src/components/Head';
 import ScrollBar from 'src/components/ScrollBar';
@@ -32,14 +33,18 @@ export default function BlogLayout({ children, frontMatter }) {
     <>
       <ScrollBar bgClassNames={frontMatterSlug?.hero} />
       <Head
-        image={`https://i18next.vercel.app${frontMatterSlug?.banner}`}
+        image={`https://ahmedjadan-dev.vercel.app/${frontMatterSlug?.banner}`}
         title={frontMatterSlug?.title}
         description={frontMatterSlug?.summary}
         date={frontMatterSlug?.publishedAt}
       />
       <Layout>
         <div className="grid grid-cols-1 max-w-5xl mx-auto "  >
-          <div className={`w-full  my-4 py-4 px-2 rounded-lg bg-gradient-to-r  mx-auto ${classes} dark:text-gray-100 dark:from-gray-900 dark:to-gray-900 dark:via-gray-800  `}
+          <motion.div
+            initial={{ y: -20, opacity: 0.5 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: .9 }}
+            className={`w-full  my-4 py-4 px-2 rounded-lg bg-gradient-to-r  mx-auto ${classes} dark:text-gray-100 dark:from-gray-900 dark:to-gray-900 dark:via-gray-800  `}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +124,7 @@ export default function BlogLayout({ children, frontMatter }) {
                 </div>
               </div>
             </article>
-          </div>
+          </motion.div>
           <div className="prose  dark:prose-dark  mt-5 max-w-4xl w-full text-gray-600 px-0 mx-auto dark:text-gray-200 md:text-lg ">
             {children}
           </div>

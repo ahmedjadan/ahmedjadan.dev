@@ -33,7 +33,7 @@ export default function Home({ posts }) {
   return (
     <Layout>
       <Head
-        image="https://i18next.vercel.app/static/meta.png"
+        image="https://ahmedjadan-dev.vercel.app/static/meta.png"
         description={t('common:bio')}
       />
       <InfoCard />
@@ -75,6 +75,7 @@ export default function Home({ posts }) {
 export async function getStaticProps({ locale, defaultLocale, locales }) {
 
   const otherLocale = locale !== defaultLocale ? locale : 'en';
+  console.log("getStaticProps ~ otherLocale", otherLocale)
   const posts = await getAllFilesFrontMatter('blog', otherLocale);
 
   return {

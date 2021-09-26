@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import '../styles/globals.css';
 import { useRouter } from 'next/router';
 import { ThemeProvider } from 'next-themes';
@@ -14,11 +15,23 @@ function MyApp({ Component, pageProps }) {
   }, [locale]);
 
   return (
-    <>
+    <motion.div
+      key={router.route}
+      initial="pageInitial"
+      animate="pageAnimate"
+      variants={{
+        pageInitial: {
+          opacity: 0,
+        },
+        pageAnimate: {
+          opacity: 1,
+        },
+      }}
+    >
       <ThemeProvider attribute="class">
         <Component {...pageProps} />
       </ThemeProvider>
-    </>
+    </motion.div>
   );
 }
 
