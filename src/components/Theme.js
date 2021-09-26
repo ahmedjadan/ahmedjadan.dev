@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link'
-
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router'
 
@@ -55,9 +54,7 @@ export default function Theme() {
               <a className={`text-gray-700 dark:text-gray-100 text-sm ${locale === 'en' ? '' : ''}`}>{locale === "ar" ? 'AR' : 'EN'} </a>
             </Link>
           )
-        })}
-
-      </div>
+        })}      </div>
 
     </div>
   );

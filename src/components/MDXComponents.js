@@ -28,7 +28,7 @@ const MDXComponents = {
   Tags,
   a: CustomLink,
   Theme,
-  CodeSnippet
+  CodeSnippet,
 };
 
 export default MDXComponents;
