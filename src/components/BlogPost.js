@@ -9,11 +9,8 @@ export default function BlogPost({
   title,
   summary,
   publishedAt,
-  tag2,
-  tag1,
-  banner,
   ogImage,
-  frontData,
+  
 }) {
   const router = useRouter()
   const { locale } = router

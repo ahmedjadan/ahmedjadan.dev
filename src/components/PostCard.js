@@ -1,12 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import { parseISO, format } from 'date-fns';
 
 export default function PostCard({ title, slug, summary, tag, author, image, data }) {
     //console.log("PostCard ~ data", data)
-    const router = useRouter()
-    const { locale } = router
+
     return (
         <Link href={`blog/${data.slug}`} className="group">
             <a >

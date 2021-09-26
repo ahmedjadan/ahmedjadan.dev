@@ -1,11 +1,7 @@
-import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
 export default function ScrollTop() {
 
-
-    const router = useRouter()
-    const { locale } = router
     const [scrollToTop, setScrollToTop] = useState(false);
     useEffect(() => {
         const showScroll = () => {
