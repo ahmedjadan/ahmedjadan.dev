@@ -81,6 +81,5 @@ export async function getStaticProps({ locale, defaultLocale, locales }) {
     props: {
       posts
     },
-    revalidate: 10
   };
 }
