@@ -75,6 +75,7 @@ export default function Home({ posts }) {
 export async function getStaticProps({ locale, defaultLocale, locales }) {
 
   const otherLocale = locale !== defaultLocale ? locale : 'en';
+  console.log("getStaticProps ~ otherLocale", otherLocale)
   const posts = await getAllFilesFrontMatter('blog', otherLocale);
 
   return {
