@@ -6,7 +6,7 @@ import { getAllFilesFrontMatter } from '../lib/mdx';
 import InfoCard from '/src/components/InfoCard';
 import Layout from '/src/Layout/Layout';
 
-const Head = dynamic(() => import('src/components/Head'))
+const Head = dynamic(() => import('/src/components/Head'))
 const FeaturedPost = dynamic(() => import('/src/components/FeaturedPost'))
 const Repos = dynamic(() => import('/src/components/Repos'))
 const ProjectCard = dynamic(() => import('/src/components/ProjectCard'))
@@ -75,13 +75,11 @@ export default function Home({ posts }) {
 export async function getStaticProps({ locale, defaultLocale, locales }) {
 
   const otherLocale = locale !== defaultLocale ? locale : 'en';
-  console.log("getStaticProps ~ otherLocale", otherLocale)
   const posts = await getAllFilesFrontMatter('blog', otherLocale);
 
   return {
     props: {
       posts
     },
-    revalidate: 10
   };
 }

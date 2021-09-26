@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: https://ahmedjadan-dev.vercel.app/sitemap.xml

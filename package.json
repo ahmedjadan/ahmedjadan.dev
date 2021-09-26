@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "release": "standard-version",
-    "generate:sitemap": "node ./scripts/generate-sitemap.js"
+    "generate:sitemap": "node ./scripts/generate-sitemap.js",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@apollo/client": "^3.4.13",
@@ -24,6 +25,7 @@
     "mdx-prism": "^0.3.3",
     "next": "^11.1.2",
     "next-mdx-remote": "^2.1.3",
+    "next-sitemap": "^1.6.168",
     "next-themes": "^0.0.14",
     "next-translate": "^1.0.7",
     "nextjs-sitemap-generator": "^1.3.1",
