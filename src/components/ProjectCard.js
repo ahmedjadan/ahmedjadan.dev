@@ -1,10 +1,12 @@
+import React from 'react';
+
 import Image from 'next/image';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { ProjectsData } from '/data/ProjectsData';
 
-export default function ProjectCard() {
+function ProjectCard() {
   const { t } = useTranslation();
   const router = useRouter();
   const { locale } = router;
@@ -40,9 +42,8 @@ export default function ProjectCard() {
                 <div className="col-span-3 px-4 relative ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className={`h-5 w-5 absolute ${
-                      locale === 'ar' ? 'left-2' : 'right-2'
-                    } top-2 hidden group-hover:block transition-all text-gray-600`}
+                    className={`h-5 w-5 absolute ${locale === 'ar' ? 'left-2' : 'right-2'
+                      } top-2 hidden group-hover:block transition-all text-gray-600`}
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -74,3 +75,6 @@ export default function ProjectCard() {
     </div>
   );
 }
+
+
+export default React.memo(ProjectCard)

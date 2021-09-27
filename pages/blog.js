@@ -3,9 +3,10 @@ import Layout from '/src/Layout/Layout';
 import BlogPost from '/src/components/BlogPost';
 import Head from '/src/components/Head'
 import useTranslation from 'next-translate/useTranslation'
+import React from 'react';
 
 
-export default function Blog({ posts }) {
+ function Blog({ posts }) {
   // const [searchValue, setSearchValue] = useState('');
   const { t } = useTranslation()
   const sortedPosts = posts?.sort(
@@ -48,6 +49,8 @@ export default function Blog({ posts }) {
     </>
   );
 }
+
+export default React.memo(Blog)
 export async function getStaticProps({ locale, defaultLocale, locales }) {
   const otherLocale = locale !== defaultLocale ? locale : 'en'
   const posts = await getAllFilesFrontMatter('blog', otherLocale)

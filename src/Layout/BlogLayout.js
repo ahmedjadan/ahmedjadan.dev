@@ -6,7 +6,6 @@ import Head from 'src/components/Head';
 import ScrollBar from 'src/components/ScrollBar';
 import ahmed from "../../public/ahmed.png"
 
-
 export default function BlogLayout({ children, frontMatter }) {
   const router = useRouter()
   const { locale, query } = router

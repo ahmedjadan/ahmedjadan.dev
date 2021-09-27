@@ -2,15 +2,24 @@ import hydrate from 'next-mdx-remote/hydrate';
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '/lib/mdx';
 import MDXComponents from 'src/components/MDXComponents';
 import BlogLayout from 'src/Layout/BlogLayout';
+import React from 'react';
 
 export default function Blog({ post, allPosts: frontMatter }) {
+  const Memo = React.memo(
+    () => {
+      console.info("memo render");
+      return <BlogLayout frontMatter={frontMatter}> {contents} </BlogLayout>;
+    },
+    // NEVER UPDATE
+    () => true
+  );
 
   const { mdxContent } = post
   const contents = hydrate(mdxContent, {
     components: MDXComponents,
   });
 
-  return <BlogLayout frontMatter={frontMatter}>{contents}</BlogLayout>;
+  return <Memo ></Memo>;
 }
 
 
