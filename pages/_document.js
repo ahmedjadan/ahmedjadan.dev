@@ -10,18 +10,7 @@ class MyDocument extends Document {
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-          }}
-        />
+        <script defer data-domain="ahmedjadan-dev.vercel.app" src="https://plausible.io/js/plausible.js"></script>
         <Head />
         <body className="dark:bg-[#1E2028] text-gray-700 bg-gray-50 ">
           <Main />
