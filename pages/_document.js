@@ -1,17 +1,13 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { GA_TRACKING_ID } from '@/lib/gtag'
 class MyDocument extends Document {
 
   render() {
 
     return (
       <Html  >
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-        />
-        <script defer data-domain="ahmedjadan-dev.vercel.app" src="https://plausible.io/js/plausible.js"></script>
-        <Head />
+        <Head>
+          <script defer data-domain="ahmedjadan.dev" src="https://plausible.io/js/plausible.js"></script>
+        </Head>
         <body className="dark:bg-[#1E2028] text-gray-700 bg-gray-50 ">
           <Main />
           <NextScript />
