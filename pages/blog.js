@@ -51,6 +51,7 @@ import React from 'react';
 }
 
 export default React.memo(Blog)
+
 export async function getStaticProps({ locale, defaultLocale, locales }) {
   const otherLocale = locale !== defaultLocale ? locale : 'en'
   const posts = await getAllFilesFrontMatter('blog', otherLocale)
