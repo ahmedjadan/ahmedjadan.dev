@@ -32,7 +32,7 @@ export default function Navbar() {
       <nav className="md:flex items-center px-2  md:flex-row md:justify-between md:mx-auto mb-5 max-w-5xl w-full  flex-wrap bg-gray-50 dark:bg-[#1E2028] ">
         <div className="flex items-center justify-between relative">
           <div className="flex items-center mr-4 md:mr-0 ml-4 justify-center">
-            <Link href="/">
+            <Link href="/" prefetch={false} >
               <a
                 className="ml-0 md:ml-0 flex items-center justify-center"
               >
@@ -45,6 +45,7 @@ export default function Navbar() {
                     width={38}
                     src={Ahmed}
                     placeholder="blur"
+                    priority 
                     className="rounded-lg z-50"
                   />
                 </div>
