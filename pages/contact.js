@@ -4,7 +4,7 @@ export default function contact() {
   return (
     <Layout>
       <Head
-        image="https://ahmedjadan-dev.vercel.app/static/meta.png"
+        image="https://www.ahmedjadan.dev/static/meta.png"
         description="Frontend Developer | Reactjs, Next.js, JavaScript, Tailwind CSS"
         title="Contct Me"
       />

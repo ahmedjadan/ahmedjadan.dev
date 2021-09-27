@@ -20,8 +20,8 @@ const Head = ({ children, title, description, keywords, url, link, date, image }
       <meta key="og:description" property="og:description" content={description} />
       <meta key="og:type" property="og:type" content="website" />
       {/* facebook */}
-      <meta property="og:url" content={`https://ahmedjadan-dev.vercel.app/${router.asPath}`} />
-      <link rel="canonical" href={`https://ahmedjadan-dev.vercel.app/${router.asPath}`} />
+      <meta property="og:url" content={`https://www.ahmedjadan.dev/${router.asPath}`} />
+      <link rel="canonical" href={`https://www.ahmedjadan.dev/${router.asPath}`} />
       <meta key="og:image" property="og:image" content={image} />
       <meta key="image" property="image" content={image} />
       <meta key="og:image:width" property="og:image:width" content="1200" />

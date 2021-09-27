@@ -33,7 +33,7 @@ export default function Home({ posts }) {
   return (
     <Layout>
       <Head
-        image="https://ahmedjadan-dev.vercel.app/static/meta.png"
+        image="https://www.ahmedjadan.dev/static/meta.png"
         description={t('common:bio')}
       />
       <InfoCard />

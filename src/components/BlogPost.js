@@ -10,7 +10,7 @@ export default function BlogPost({
   summary,
   publishedAt,
   ogImage,
-  
+
 }) {
   const router = useRouter()
   const { locale } = router
@@ -20,7 +20,7 @@ export default function BlogPost({
       <Head
         title={t('common:blog')}
         description={t('common:bio')}
-        image={`https://ahmedjadan-dev.vercel.app/${ogImage}`}
+        image={`https://www.ahmedjadan.dev/${ogImage}`}
         keywords="جافاسكربت، رياكت، HTML, CSS, JS, JavaScript, Reactjs, tailwindcss, Nextjs, Nodejs"
       />
       <div className=" group mx-auto max-w-4xl flex rounded-md flex-col py-2 px-3 bg-gray-100/50 dark:bg-[#24273167] mt-[5px] md:grid md:grid-cols-6 ">

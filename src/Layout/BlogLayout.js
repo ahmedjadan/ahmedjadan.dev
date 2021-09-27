@@ -31,7 +31,7 @@ export default function BlogLayout({ children, frontMatter }) {
     <>
       <ScrollBar bgClassNames={frontMatterSlug?.hero} />
       <Head
-        image={`https://ahmedjadan-dev.vercel.app/${frontMatterSlug?.banner}`}
+        image={`https://www.ahmedjadan.dev/${frontMatterSlug?.banner}`}
         title={frontMatterSlug?.title}
         description={frontMatterSlug?.summary}
         date={frontMatterSlug?.publishedAt}
@@ -39,7 +39,7 @@ export default function BlogLayout({ children, frontMatter }) {
       <Layout>
         <div className="grid grid-cols-1 max-w-5xl mx-auto "  >
           <div
-            
+
             className={`w-full  my-4 py-4 px-2 rounded-lg bg-gradient-to-r  mx-auto ${classes} dark:text-gray-100 dark:from-gray-900 dark:to-gray-900 dark:via-gray-800  `}
           >
             <svg

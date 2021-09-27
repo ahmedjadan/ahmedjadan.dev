@@ -1,4 +1,4 @@
-This is my personal website [Ahmed Jadan](https://ahmedjadan.dev)
+This is my personal website [Ahmed Jadan](https://www.ahmedjadan.dev/)
 
 built using: 
 
