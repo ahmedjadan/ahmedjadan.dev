@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "release": "standard-version",
-    "postbuild": "node ./scripts/generate-rss.mjs && next-sitemap",
+    "postbuild": "next-sitemap",
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
