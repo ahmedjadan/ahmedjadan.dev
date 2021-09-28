@@ -34,8 +34,8 @@ const Head = ({ children, title, description, keywords, url, link, date, image }
       <meta key="twitter:image" name="twitter:image" content={image} />
       <meta property="twitter:image" content={image} />
       <link key="icon32" rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
-      <meta key="msapplication-TileColor" name="msapplication-TileColor" content="#667eea" />
-      <meta key="theme-color" name="theme-color" content="#667eea" />
+      <meta key="msapplication-TileColor" name="msapplication-TileColor" content="#A5B4FC" />
+      <meta key="theme-color" name="theme-color" content="#A5B4FC" />
       <title key="pageTitle">{title ? `${title} | Ahmed Ja'dan` : "Ahmed Ja'dan"} </title>
       {children}
     </NextHead>
