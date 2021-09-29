@@ -1,2 +1,4 @@
 User-agent: *
+# Host
+Host: https://www.ahmedjadan.dev
 Sitemap: https://www.ahmedjadan.dev/sitemap.xml

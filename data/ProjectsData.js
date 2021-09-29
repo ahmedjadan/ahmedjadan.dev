@@ -21,7 +21,7 @@ export const ProjectsData = {
       title: 'importable.io',
       description: `Simple landing page for small cooperate`,
       stacks: ['Reactjs', 'css modules', 'netlify', 'firebase'],
-      href: 'https://importable.io/',
+      href: 'https://importable.netlify.app/',
       image: '/static/images/projects/importable.png',
 
     },
@@ -55,7 +55,7 @@ export const ProjectsData = {
       title: 'importable.io | للاستيراد',
       description: `Simple landing page for small cooperate`,
       stacks: ['Reactjs', 'css modules', 'netlify', 'firebase'],
-      href: 'https://importable.io/',
+      href: 'https://importable.netlify.app/',
       image: '/static/images/projects/importable.png',
 
     },
