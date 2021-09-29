@@ -9,7 +9,6 @@
     "build": "next build",
     "start": "next start",
     "release": "standard-version",
-    "postbuild": "next-sitemap",
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
