@@ -3,12 +3,13 @@
   "version": "0.1.10",
   "private": true,
   "license": "MIT",
-  "github" : "",
+  "github": "",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "release": "standard-version",
+    "postbuild": "next-sitemap",
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
