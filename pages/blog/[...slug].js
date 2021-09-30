@@ -42,8 +42,9 @@ export async function getStaticPaths({ locales, defaultLocale, availableLocales 
 
 export async function getStaticProps({ defaultLocale, locales, locale, params }) {
   const otherLocale = locale !== defaultLocale ? locale : 'en'
+  console.log("getStaticProps ~ otherLocale", otherLocale)
   const allPosts = await getAllFilesFrontMatter('blog', otherLocale)
-  const post = await getFileBySlug('blog', params.slug, otherLocale)
+  const post = await getFileBySlug('blog', params.slug.join('/'), otherLocale)
 
 
   return { props: { allPosts, post } }

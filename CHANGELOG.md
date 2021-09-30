@@ -9,5 +9,4 @@ All notable changes to this project will be documented in this file. See [standa
 
 * hello world post ([43766b5](https://github.com/ahmedjadan/ahmedjadan.dev/commit/43766b50f92d994c7b3fabefaed51e152f69bf58))
 
-### [0.1.10](https://github.com/ahmedjadan/ahmedjadan.dev/compare/v0.1.9...v0.1.10) (2021-06-22)
 

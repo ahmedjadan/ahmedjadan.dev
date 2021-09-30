@@ -6,7 +6,7 @@ import useTranslation from 'next-translate/useTranslation'
 import React from 'react';
 
 
- function Blog({ posts }) {
+function Blog({ posts }) {
   // const [searchValue, setSearchValue] = useState('');
   const { t } = useTranslation()
   const sortedPosts = posts?.sort(

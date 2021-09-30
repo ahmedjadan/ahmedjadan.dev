@@ -1,18 +1,21 @@
 {
   "greeting": "Hey 👋,  I am Ahmed Ja'dan",
-  "bio": "Self-taught front-end web developer, creating websites using JavaScript, React, Nextjs, and tailwindcss.",
+  "bio": "I'm a self-taught front end developer specialized in building lightweight, fast and interactive experiences using Reactjs, Nextjs and Tailwind CSS",
   "blog": "Writing",
-  "blogSub": "Latest blogs, where I document my learning journey, From programming to hobbies and travel, digital currencies and the world of blockchain, hope you like it.",
+  "blogSub": "This page hosts my latest blog posts. You can follow along as I explore topics like, web developmenr, tech stacks such JavaScript, React, Nextjs and tailwindcss.",
   "more": "Read more",
   "all": "All Posts",
   "pub": "Published",
   "name": "Ahmed Ja'dan",
   "featured_posts": "Featured Blogs",
   "portfolio": "Portfolio",
-  "portfolio_sub": "List of my side projects",
+  "portfolio_sub": "A collection of projects that I've created so far.",
   "reading_time": "mins read",
   "currently": "Currently",
   "posts": "Posts",
-  "repoTitle": "Pinned Repositories"
+  "repoTitle": "Pinned Repositories",
+  "repoSub": "Contributing to Open Source, one Pin at a time",
+  "404bigText": "Sorry we couldn't find this page.",
+  "404backButton": "Back to homepage"
 
 }

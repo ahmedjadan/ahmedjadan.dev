@@ -14,7 +14,7 @@ function Repos({ item: { name, description, stargazerCount, forkCount, url, lang
             <h1 className="text-indigo-500 dark:text-indigo-400 space-x-3 px-1 font-semibold"> {name} </h1>
           </div>
           <div className="py-3">
-            <p className=" space-x-3 px-1 text-sm text-gray-500">{description}</p>
+            <p className=" space-x-3 px-1 text-sm text-gray-600 dark:text-gray-400">{description}</p>
           </div>
           <div className="flex justify-between">
             <div className="flex items-center">

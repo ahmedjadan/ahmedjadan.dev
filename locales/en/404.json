@@ -1,5 +1,4 @@
 {
-  "bigText": "Sorry we couldn't find this page.",
-  "littleText": "But dont worry, you can find plenty of other things on our homepage.",
-  "backButton": "Back to homepage"
+  "404bigText": "Sorry we couldn't find this page.",
+  "404backButton": "Back to homepage"
 }

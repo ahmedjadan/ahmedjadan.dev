@@ -1,18 +1,23 @@
 import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation'
-
+import Layout from '@/src/Layout/Layout'
 export default function ErrorPage() {
   const { t } = useTranslation()
 
   return (
-    <div className="max-w-4xl mx-auto flex flex-col items-center justify-center min-h-screen w-full">
-      {/* <p className="text-2xl"> عفوا... الصفحة المطلوبة غير متاحة !!</p> */}
-      {t('404:bigText')}
-      <Link href="/">
-        <a className="text-gray-700 mt-4 text-xl bg-gray-50 px-4 py-2 rounded-lg">
-          عودة الى الرئيسية
-        </a>
-      </Link>
-    </div>
+    <Layout>
+      <div className="max-w-4xl mx-auto flex flex-col items-center justify-center min-h-full w-full">
+        <span className="text-[10em] font-bold rotate-6 dark:text-gray-300 "> 404 </span>
+        <h1 className="text-2xl dark:text-gray-300 ">
+          {t('common:404bigText')}
+
+        </h1>
+        <Link href="/">
+          <a className="text-indigo-700 dark:text-indigo-400  mt-4 text-xl ">
+            {t('common:404backButton')}
+          </a>
+        </Link>
+      </div>
+    </Layout>
   );
 }
