@@ -52,7 +52,7 @@ export default function Tags({ tag1, tag2 }) {
                       : tag2 == 'sanity.io'
                         ? 'text-xs px-2 font-medium bg-red-500/10  text-red-800 dark:bg-[#e718181f] rounded '
                         : tag2 == 'CSS'
-                          ? 'bg-blue-200 text-gray-900'
+                          ? 'text-xs px-2 font-medium bg-blue-500 bg-opacity-10 text-blue-800 rounded '
                           : ''
           }
         >

@@ -14,8 +14,8 @@ export default function FeaturedPost({ posts }) {
                         <div className=" bg-cover bg-center h-full w-full object-cover   overflow-hidden">
                             <Image
                                 src={featuredPost?.banner}
-                                // placeholder="blur"
                                 //blurDataURL={blur}
+                                blur="L02?BSyG8wH;.8axMwMw8woF%%tS"
                                 layout="responsive"
                                 width={464}
                                 height={260}
@@ -25,7 +25,7 @@ export default function FeaturedPost({ posts }) {
                                 className="object-cover bg-center  bg-contain rounded-t-md min-w-full overflow-hidden  "
                             />
                         </div>
-                        <div className="mt-4 px-2">
+                        <div className="mt-4 px-2 pb-4">
                             <Tags tag1={featuredPost?.tag1} tag2={featuredPost?.tag2} />
                             <div className="py-1">
                                 <h1 className="text-2xl font-bold text-gray-700 dark:text-gray-200 group-hover:text-indigo-500 transition duration-300 ease-in-out">
@@ -47,8 +47,8 @@ export default function FeaturedPost({ posts }) {
                             <div className="py-2">
                                 <p className="text-gray-600 dark:text-gray-300">
                                     {' '}
-                                    {featuredPost?.summary}{' '}
-                                </p>
+                                    {featuredPost?.summary}{' '}  
+                                </p> 
                             </div>
                         </div>
                     </div>
