@@ -35,7 +35,7 @@ export default function BlogPost({
           </div>
         </div>
         <div className="md:grid md:col-span-5 rounded-lg  px-2  order-0 md:order-none">
-          <Link href={`blog/${slug}`} className="hover:text-indigo-500 ">
+          <Link href={`/blog/${slug}`} className="hover:text-indigo-500 ">
             <a>
               <h4 className="text-2xl text-gray-600 group-hover:text-indigo-500  dark:group-hover:text-indigo-400 leading-10 font-bold dark:text-gray-200 transition ease-in-out">
                 {title}

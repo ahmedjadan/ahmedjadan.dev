@@ -44,10 +44,10 @@ export default function Home({ posts }) {
           {t('common:featured_posts')}
         </h1>
       </div>
-      <div className="max-w-5xl mx-auto  rounded-md  ">
-        <div className="mx-auto grid md:grid-cols-6 grid-cols-1 gap-x-6 dark:bg-[#2427313d] px-2">
+      <div className="max-w-5xl mx-auto py-5 rounded-md  ">
+        <div className="mx-auto grid md:grid-cols-6 grid-cols-1 gap-x-6  px-2">
           <FeaturedPost posts={posts} />
-          <div className="w-full col-span-3  ">
+          <div className="w-full col-span-3">
             {sortedBlogs &&
               sortedBlogs.map((data, idx) => (
                 <PostCard data={data} key={idx} />

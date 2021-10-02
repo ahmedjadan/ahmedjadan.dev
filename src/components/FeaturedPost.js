@@ -8,9 +8,9 @@ export default function FeaturedPost({ posts }) {
 
     return (
         <>
-            <Link href={`blog/${featuredPost?.slug}`}>
-                <a className="grid col-span-3 group p-2 ">
-                    <div className="grid col-span-2 overflow-hidden">
+            <Link href={`/blog/${featuredPost?.slug}`}>
+                <a className="grid col-span-3 group dark:bg-[#242731a1] rounded-md">
+                    <div className="grid col-span-2 ">
                         <div className=" bg-cover bg-center h-full w-full object-cover   overflow-hidden">
                             <Image
                                 src={featuredPost?.banner}
@@ -22,11 +22,11 @@ export default function FeaturedPost({ posts }) {
                                 objectFit="cover"
                                 objectPosition="bottom center"
                                 alt={featuredPost?.title}
-                                className="object-cover bg-center bg-contain rounded-md min-w-full overflow-hidden"
+                                className="object-cover bg-center  bg-contain rounded-t-md min-w-full overflow-hidden  "
                             />
                         </div>
-                        <div className="mt-4">
-                            <Tags tag1={featuredPost?.tag1} />
+                        <div className="mt-4 px-2">
+                            <Tags tag1={featuredPost?.tag1} tag2={featuredPost?.tag2} />
                             <div className="py-1">
                                 <h1 className="text-2xl font-bold text-gray-700 dark:text-gray-200 group-hover:text-indigo-500 transition duration-300 ease-in-out">
                                     {' '}

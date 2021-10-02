@@ -8,7 +8,7 @@ export default function PostCard({ title, slug, summary, tag, author, image, dat
     return (
         <Link href={`blog/${data.slug}`} className="group">
             <a >
-                <div className="group grid grid-cols-4 rounded-md bg-gray-100/50 dark:bg-[#2427313d] gap-3 relative mb-5 mt-4 md:mt-0 p-2">
+                <div className="group grid grid-cols-4 rounded-md  dark:bg-[#2427313d] gap-3 relative mb-5 mt-4 md:mt-0 p-2">
                     <div className="col-span-1 h-20 w-20 rounded-md">
                         <Image
                             src={data.banner}
