@@ -24,7 +24,7 @@ export default function Tags({ tag1, tag2 }) {
                   : tag1 == 'strapi'
                     ? 'text-xs px-2 font-medium bg-purple-500/10 dark:bg-purple-500/20 text-indigo-500 rounded py-0.5'
                     : tag1 == 'HTML'
-                      ? 'text-xs px-2 font-medium bg-green-500 bg-opacity-10 text-green-800 rounded '
+                      ? 'text-xs px-2 font-medium bg-green-500/10 text-green-600 rounded '
                       : tag1 == 'markdown' ? 'text-xs px-2 font-medium bg-gray-500 bg-opacity-10 text-gray-800 rounded ':''
           }
         >
@@ -52,7 +52,7 @@ export default function Tags({ tag1, tag2 }) {
                       : tag2 == 'sanity.io'
                         ? 'text-xs px-2 font-medium bg-red-500/10  text-red-800 dark:bg-[#e718181f] rounded '
                         : tag2 == 'CSS'
-                          ? 'text-xs px-2 font-medium bg-blue-500 bg-opacity-10 text-blue-800 rounded '
+                          ? 'text-xs px-2 font-medium bg-blue-500/10 text-blue-600 rounded '
                           : ''
           }
         >

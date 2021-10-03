@@ -1,4 +1,6 @@
 import { parseISO, format } from 'date-fns';
+import { arSA } from 'date-fns/locale'
+
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Layout from './Layout';
@@ -8,8 +10,9 @@ import ahmed from "../../public/ahmed.png"
 
 export default function BlogLayout({ children, frontMatter }) {
   const router = useRouter()
-  const { locale, query } = router
+  const { locale: activeLocale, query } = router
 
+  const dateFormat = activeLocale === 'ar' ? 'MMMM, dd, yyyy' : 'MMM, dd, yyyy'
 
   const frontMatterSlug = frontMatter?.find((slug) => slug.slug == query.slug)
   const hero = frontMatterSlug.hero
@@ -49,7 +52,7 @@ export default function BlogLayout({ children, frontMatter }) {
               className={`h-8 w-8  cursor-pointer ${classes}`}
               onClick={() => router.back()}
             >
-              {locale === 'ar' ? (
+              {activeLocale === 'ar' ? (
                 <path
                   fillRule="evenodd"
                   d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
@@ -63,7 +66,7 @@ export default function BlogLayout({ children, frontMatter }) {
             <article className=" px-2 py-12">
               <div className="flex justify-center  items-center pb-2">
                 <h1
-                  className={` font-bold text-3xl  md:text-4xl ${locale === 'ar' ? 'text-right' : 'text-left'}`}
+                  className={` font-bold text-3xl  md:text-4xl ${activeLocale === 'ar' ? 'text-right' : 'text-left'}`}
                   style={{ lineHeight: '1.6em' }}
                 >
                   {frontMatterSlug?.title}
@@ -71,17 +74,17 @@ export default function BlogLayout({ children, frontMatter }) {
               </div>
               <div className="flex  items-center justify-center space-x-4 ">
                 <div className="flex items-center px-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4  ${locale === 'ar' ? ' ml-1' : 'order-2 ml-2'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4  ${activeLocale === 'ar' ? ' ml-1' : 'order-2 ml-2'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <p
                     className="text-gray-600 dark:text-gray-300 text-sm">
-                    {Math.ceil(frontMatterSlug?.frontData?.readingTime.minutes.toFixed(2))} {locale === 'ar' ? 'دقيقة قراءة' : 'min read'}
+                    {Math.ceil(frontMatterSlug?.frontData?.readingTime.minutes.toFixed(2))} {activeLocale === 'ar' ? 'دقيقة قراءة' : 'min read'}
                   </p>
                 </div>
 
                 <div className="flex items-center px-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4  ${locale === 'ar' ? ' order-0 ml-2' : 'mr-2'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4  ${activeLocale === 'ar' ? ' order-0 ml-2' : 'mr-2'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                   <div>
@@ -90,8 +93,7 @@ export default function BlogLayout({ children, frontMatter }) {
                       <dd className="text-gray-600 dark:text-gray-300  text-sm">
                         <time>
                           {format(
-                            parseISO(frontMatterSlug.publishedAt),
-                            'MMM, dd, yyyy'
+                            parseISO(frontMatterSlug.publishedAt), dateFormat, { locale: activeLocale === 'ar' ? arSA : '' }
                           )}
                         </time>
                       </dd>
@@ -114,7 +116,7 @@ export default function BlogLayout({ children, frontMatter }) {
                       placeholder="blur"
                     />
                   </div>
-                  <p className={`${locale === 'ar' ? 'mr-1 font-cairo' : 'ml-1 font-Inter'} text-gray-600 dark:text-gray-300 `}>
+                  <p className={`${activeLocale === 'ar' ? 'mr-1 font-cairo' : 'ml-1 font-Inter'} text-gray-600 dark:text-gray-300 `}>
                     {frontMatterSlug?.name}{' '}
                   </p>
                 </div>

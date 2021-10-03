@@ -1,8 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image';
 import { parseISO, format } from 'date-fns';
+import { useRouter } from 'next/router';
 
+import { arSA } from 'date-fns/locale'
 export default function PostCard({ title, slug, summary, tag, author, image, data }) {
+    const router = useRouter()
+
+    const { locale: activeLocale } = router
+    const dateFormat = activeLocale === 'ar' ? 'MMMM, dd, yyyy' : 'MMM, dd, yyyy'
     //console.log("PostCard ~ data", data)
 
     return (
@@ -30,8 +36,7 @@ export default function PostCard({ title, slug, summary, tag, author, image, dat
                             <dd className="text-gray-500 dark:text-gray-500 text-sm">
                                 <time>
                                     {format(
-                                        parseISO(data.publishedAt),
-                                        'MMM, dd, yyyy'
+                                        parseISO(data.publishedAt), dateFormat, { locale: activeLocale === 'ar' ? arSA : '' }
                                     )}
                                 </time>
                             </dd>

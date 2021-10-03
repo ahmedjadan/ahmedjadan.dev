@@ -44,6 +44,7 @@ export default function Navbar() {
                     objectFit="cover"
                     width={38}
                     src={Ahmed}
+                    placeholder="blur"
                     priority
                     className="rounded-lg z-50"
                   />

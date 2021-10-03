@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation'
 import { parseISO, format } from 'date-fns';
+import { arSA } from 'date-fns/locale'
+
 import Head from './Head';
 
 export default function BlogPost({
@@ -13,8 +15,10 @@ export default function BlogPost({
 
 }) {
   const router = useRouter()
-  const { locale } = router
+  const { locale: activeLocale } = router
   const { t } = useTranslation()
+
+  const dateFormat = activeLocale === 'ar' ? 'MMMM, dd, yyyy' : 'MMM, dd, yyyy'
   return (
     <>
       <Head
@@ -25,11 +29,13 @@ export default function BlogPost({
       />
       <div className=" group mx-auto max-w-4xl flex rounded-md flex-col py-2 px-3 bg-gray-100/50 dark:bg-[#24273167] mt-[5px] md:grid md:grid-cols-6 ">
         <div className=" md:grid md:col-span-1 order-2 md:order-none ml-2 ">
-          <div className={`flex  items-center md:flex-col  justify-between md:justify-center flex-row md:border-l-[1px] dark:border-gray-600 ${locale === 'ar' ? 'md:border-l-[1px]' : 'md:border-r-[1px] md:border-l-0 mr-2'}`}>
+          <div className={`flex  items-center md:flex-col  justify-between md:justify-center flex-row md:border-l-[1px] dark:border-gray-600 ${activeLocale === 'ar' ? 'md:border-l-[1px]' : 'md:border-r-[1px] md:border-l-0 mr-2'}`}>
             <dl>
               <dt className="sr-only"> نشر في :</dt>
               <dd className=" p-0  dark:text-gray-400 text-gray-600 items-center flex ">
-                <time>{format(parseISO(publishedAt), 'MMM, dd, yyyy')}</time>
+                <time>
+                  {format(parseISO(publishedAt), dateFormat, { locale: activeLocale === 'ar' ? arSA : '' } )}
+                </time>
               </dd>
             </dl>
           </div>

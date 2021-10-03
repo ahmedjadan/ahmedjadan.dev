@@ -1,9 +1,17 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { parseISO, format } from 'date-fns';
+import { arSA } from 'date-fns/locale'
+
 import Tags from '/src/components/Tags';
 
+
 export default function FeaturedPost({ posts }) {
+    const router = useRouter()
+    const { locale: activeLocale } = router
+    const dateFormat = activeLocale === 'ar' ? 'MMMM, dd, yyyy' : 'MMM, dd, yyyy'
+
     const featuredPost = posts?.find((post) => post.featured !== false);
 
     return (
@@ -14,9 +22,9 @@ export default function FeaturedPost({ posts }) {
                         <div className=" bg-cover bg-center h-full w-full object-cover   overflow-hidden">
                             <Image
                                 src={featuredPost?.banner}
-                                //blurDataURL={blur}
-                                blur="L02?BSyG8wH;.8axMwMw8woF%%tS"
+                                blurDataURL={'eCF6B#-:0JInxr?@s;nmIoWUIko1%NocRk.8xbIUaxR*^+s;RiWAWU'}
                                 layout="responsive"
+                                placeholder="blur"
                                 width={464}
                                 height={260}
                                 objectFit="cover"
@@ -33,23 +41,63 @@ export default function FeaturedPost({ posts }) {
                                     {featuredPost?.title}{' '}
                                 </h1>
                             </div>
-                            <dl>
-                                <dt className="sr-only"> نشر في :</dt>
-                                <dd className="text-gray-500 dark:text-gray-500 text-sm">
-                                    <time>
-                                        {format(
-                                            parseISO(featuredPost?.publishedAt),
-                                            'MMM, dd, yyyy'
-                                        )}
-                                    </time>
-                                </dd>
-                            </dl>
+
                             <div className="py-2">
                                 <p className="text-gray-600 dark:text-gray-300">
                                     {' '}
-                                    {featuredPost?.summary}{' '}  
-                                </p> 
+                                    {featuredPost?.summary}{' '}
+                                </p>
                             </div>
+                            <div className="flex  items-center  space-x-2 pt-4 ">
+                                <div className="flex items-center ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4  ${activeLocale === 'ar' ? ' ml-1' : 'order-2 ml-2'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <p
+                                        className="text-gray-600 dark:text-gray-500 text-sm">
+                                        {Math.ceil(featuredPost?.frontData?.readingTime.minutes.toFixed(2))} {activeLocale === 'ar' ? 'دقيقة قراءة' : 'min read'}
+                                    </p>
+                                </div>
+
+                                <div className="flex items-center px-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4  ${activeLocale === 'ar' ? ' order-0 ml-2' : 'mr-2'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <div>
+                                        <dl>
+                                            <dt className="sr-only"> نشر في :</dt>
+                                            <dd className="text-gray-600 dark:text-gray-500 text-sm">
+                                                <time>
+                                                    {format(
+                                                        parseISO(featuredPost.publishedAt), dateFormat, { locale: activeLocale === 'ar' ? arSA : '' }
+                                                    )}
+                                                </time>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* <div className="py-2 flex items-center " >
+                                <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4 mx-1`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <p className="text-gray-600 dark:text-gray-500 mx-1">
+                                    {' '}
+                                    {Math.ceil(featuredPost?.frontData?.readingTime.minutes.toFixed(2))}m
+
+                                </p>
+                                <dl >
+                                    <dt className="sr-only"> نشر في :</dt>
+                                    <dd className="text-gray-600 dark:text-gray-500 text-sm">
+                                        <time>
+                                            {format(
+                                                parseISO(featuredPost?.publishedAt),
+                                                'MMM, dd, yyyy'
+                                            )}
+                                        </time>
+                                    </dd>
+                                </dl>
+                            </div> */}
                         </div>
                     </div>
                 </a>
