@@ -6,8 +6,6 @@ module.exports = {
     extend: {
       fontFamily: {
         cairo: ['Cairo'],
-        scheherazade: ['Scheherazade'],
-        Almarai: ['Almarai'],
         Inter: ['Inter'],
       },
       boxShadow: {

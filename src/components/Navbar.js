@@ -44,19 +44,13 @@ export default function Navbar() {
                     objectFit="cover"
                     width={38}
                     src={Ahmed}
-                    placeholder="blur"
                     priority
                     className="rounded-lg z-50"
                   />
                 </div>
-                <span className={`font-semibold group md:text-xl hover:text-opacity-5 relative sm:text-sm text-indigo-600 dark:text-gray-200 ${activeLocale === 'ar' ? 'mr-3' : 'ml-3'}`}>
+                <span className={`font-semibold group md:text-xl relative sm:text-sm text-indigo-600 dark:text-gray-200 ${activeLocale === 'ar' ? 'mr-3' : 'ml-3'}`}>
                   {t('common:name')}
-                  {activeLocale === 'ar' ? (
-                    <>
-                      <span className="bg-blue-200/50 flex items-center justify-center rounded-full w-4 h-4 absolute left-0 text-xs -top-3 ">?</span>
-                      <span className="hidden items-center transition  group-hover:flex  absolute rihgt-0 md:text-xl  sm:text-sm text-indigo-600 dark:text-gray-200 font-semibold ">أحمد جعدان</span>
-                    </>
-                  ) : ''}
+
                 </span>
 
               </a>
@@ -94,10 +88,7 @@ export default function Navbar() {
                   onClick={closeMenuItem}
                   className="rounded focus:text-indigo-600 md:ml-4 px-2 py-2 md:px-3 hover:text-indigo-700  text-gray-900 dark:text-gray-100"
                 >
-                  <span className="text-sm text-indigo-400  px-2">
-                    {' '}
-                    {nav.idx}{' '}
-                  </span>
+
                   {t(`navigation:${nav.title.toLowerCase()}`)}
                 </a>
               </Link>

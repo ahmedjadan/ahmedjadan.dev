@@ -17,7 +17,7 @@ export default function FeaturedPost({ posts }) {
     return (
         <>
             <Link href={`/blog/${featuredPost?.slug}`}>
-                <a className="grid col-span-3 group dark:bg-[#242731a1] rounded-md">
+                <a className="grid col-span-3 group dark:bg-[#242731a1] mb-8 rounded-md">
                     <div className="grid col-span-2 ">
                         <div className=" bg-cover bg-center h-full w-full object-cover   overflow-hidden">
                             <Image
@@ -26,7 +26,7 @@ export default function FeaturedPost({ posts }) {
                                 layout="responsive"
                                 placeholder="blur"
                                 width={464}
-                                height={260}
+                                height={210}
                                 objectFit="cover"
                                 objectPosition="bottom center"
                                 alt={featuredPost?.title}
@@ -54,7 +54,7 @@ export default function FeaturedPost({ posts }) {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                     <p
-                                        className="text-gray-600 dark:text-gray-500 text-sm">
+                                        className="text-gray-600 dark:text-gray-500 text-xs">
                                         {Math.ceil(featuredPost?.frontData?.readingTime.minutes.toFixed(2))} {activeLocale === 'ar' ? 'دقيقة قراءة' : 'min read'}
                                     </p>
                                 </div>
@@ -66,7 +66,7 @@ export default function FeaturedPost({ posts }) {
                                     <div>
                                         <dl>
                                             <dt className="sr-only"> نشر في :</dt>
-                                            <dd className="text-gray-600 dark:text-gray-500 text-sm">
+                                            <dd className="text-gray-600 dark:text-gray-500 text-xs">
                                                 <time>
                                                     {format(
                                                         parseISO(featuredPost.publishedAt), dateFormat, { locale: activeLocale === 'ar' ? arSA : '' }
@@ -77,27 +77,7 @@ export default function FeaturedPost({ posts }) {
                                     </div>
                                 </div>
                             </div>
-                            {/* <div className="py-2 flex items-center " >
-                                <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4 mx-1`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                <p className="text-gray-600 dark:text-gray-500 mx-1">
-                                    {' '}
-                                    {Math.ceil(featuredPost?.frontData?.readingTime.minutes.toFixed(2))}m
 
-                                </p>
-                                <dl >
-                                    <dt className="sr-only"> نشر في :</dt>
-                                    <dd className="text-gray-600 dark:text-gray-500 text-sm">
-                                        <time>
-                                            {format(
-                                                parseISO(featuredPost?.publishedAt),
-                                                'MMM, dd, yyyy'
-                                            )}
-                                        </time>
-                                    </dd>
-                                </dl>
-                            </div> */}
                         </div>
                     </div>
                 </a>

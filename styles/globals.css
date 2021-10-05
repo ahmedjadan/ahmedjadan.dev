@@ -3,10 +3,43 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter/Inter-Medium.ttf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter/Inter-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter/Inter-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter/Inter-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter/Inter-Light.ttf");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Scheherazade:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
 
 @layer components {
   .active {
@@ -42,12 +75,20 @@ ol {
   @apply px-6;
 }
 
+[dir='rtl'] .prose blockquote {
+  text-align: right;
+  border-left: none;
+  border-right: 0.25rem solid #e5e7eb;
+  padding-right: 1em;
+  quotes: '\201D''\201E';
+  font-weight: 500;
+  font-style: italic;
+}
 html {
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 body {
-  font-family: 'Cairo', sans-serif;
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -62,9 +103,6 @@ body {
   overflow-x: auto;
 }
 
-.prose pre {
-  @apply selection:bg-gray-400/50 selection:text-gray-200;
-}
 .prose code {
   text-align: left;
   direction: ltr;
@@ -102,6 +140,7 @@ pre:not([class*='language-']) {
   background: rgb(40, 42, 54);
   padding: 0.5rem;
 }
+
 code[class*='language-'],
 pre[class*='language-'] {
   color: #ccc;
@@ -131,12 +170,10 @@ pre[class*='language-'] {
 pre[class*='language-'] {
   margin: 2rem 0;
   overflow-x: auto;
-  /* padding: 1em; */
 }
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-  /* background: #22242b; */
   background: rgb(40, 42, 54);
   padding: 0.5rem;
 }
@@ -144,11 +181,9 @@ pre[class*='language-'] {
   display: inline-block;
   font-family: Fira Code, Menlo, Monaco, Consolas, Andale Mono, Courier New,
     monospace;
-  background-color: rgba(142, 129, 241, 0.15);
-  /* border: 0.5px solid #9488f2; */
+  border-bottom: 1px dotted #9488f2;
   color: rgba(142, 129, 241, 0.89);
-  /* padding: 0px 1px; */
-  font-size: 75%;
+  font-size: 18px;
 }
 /* Inline code */
 :not(pre) > code[class*='language-'] {
@@ -176,13 +211,13 @@ pre[class*='language-'] {
 }
 
 .token.function-name {
-  color: #6196cc;
+  color: #06b400;
 }
 
 .token.boolean,
 .token.number,
 .token.function {
-  color: #f08d49;
+  color: #0798d1;
 }
 
 .token.property,
@@ -197,7 +232,7 @@ pre[class*='language-'] {
 .token.atrule,
 .token.keyword,
 .token.builtin {
-  color: #cc99cd;
+  color: #e62d93;
 }
 
 .token.string,

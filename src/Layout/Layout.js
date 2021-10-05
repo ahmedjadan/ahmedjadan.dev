@@ -11,7 +11,7 @@ const Navbar = dynamic(() => import('src/components/Navbar'))
   return (
     <>
       <div
-        className={`grid min-h-screen mx-auto  ${locale === 'ar' ? 'font-Almarai' : 'font-Inter'}`}
+        className={`grid min-h-screen mx-auto  ${locale === 'ar' ? 'font-cairo' : 'font-Inter'}`}
         style={{
           gridTemplateRows: 'auto 1fr auto',
         }}
