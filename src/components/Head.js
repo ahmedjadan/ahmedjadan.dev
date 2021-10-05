@@ -14,12 +14,12 @@ const Head = ({ children, title, description, keywords, url, link, date, image }
       <meta key="title" name="title" content={title} />
 
       {/* fonts */}
-      <link rel="preload" href="/fonts/inter/Inter-Light.ttf" as="font" crossOrigin="" />
-      <link rel="preload" href="/fonts/inter/Inter-SemiBold.ttf" as="font" crossOrigin="" />
-      <link rel="preload" href="/fonts/inter/Inter-Bold.ttf" as="font" crossOrigin="" />
-      <link rel="preload" href="/fonts/inter/Inter-Regular.ttf" as="font" crossOrigin="" />
-      <link rel="preload" href="/fonts/inter/Inter-Medium.ttf" as="font" crossOrigin="" />
-
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+      <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600&display=swap"
+        rel="stylesheet"
+      />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />

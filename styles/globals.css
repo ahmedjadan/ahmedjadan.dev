@@ -3,44 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@font-face {
-  font-family: "Inter";
-  src: url("/fonts/inter/Inter-Medium.ttf");
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("/fonts/inter/Inter-Regular.ttf");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("/fonts/inter/Inter-Bold.ttf");
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("/fonts/inter/Inter-SemiBold.ttf");
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("/fonts/inter/Inter-Light.ttf");
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-}
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600&display=swap');
-
 @layer components {
   .active {
     @apply flex max-w-full top-0 flex-col items-start dark:bg-[#242731] bg-indigo-100 transition duration-500 ease-in-out hover:translate-x-2 rounded-lg mt-2;
