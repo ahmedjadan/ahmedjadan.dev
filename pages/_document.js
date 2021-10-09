@@ -7,6 +7,12 @@ class MyDocument extends Document {
       <Html  >
         <Head>
           <script defer data-domain="ahmedjadan.dev" src="https://plausible.io/js/plausible.js"></script>
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+          <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body className="dark:bg-[#1E2028] text-gray-700 bg-gray-50 ">
           <Main />

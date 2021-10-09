@@ -22,7 +22,7 @@ function ProjectCard() {
 
       <div className="grid md:grid-cols-2 grid-cols-1 gap-1 ">
         {ProjectsData[locale]?.map((project, idx) => (
-          <Link href={project.href} key={project.title}>
+          <Link href={`/portfolio/${project.details}`} key={project.title}>
             <a className=" relative p-2 group" key={project.title}>
               <div className="grid grid-cols-4 p-1  group-hover:shadow-xl dark:bg-[#2427313d] rounded-md   transition duration-200 ease-in-out">
                 <div className="col-span-1 h-full w-full ">
@@ -31,7 +31,7 @@ function ProjectCard() {
                     alt={project.title}
                     width={190}
                     height={170}
-                    objectFit="cover"
+                    objectFit="contain"
                     objectPosition="bottom center"
                     layout="responsive"
                     className="rounded-md min-h-full w-full "

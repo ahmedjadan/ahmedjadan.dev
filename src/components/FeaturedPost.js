@@ -22,11 +22,11 @@ export default function FeaturedPost({ posts }) {
                         <div className=" bg-cover bg-center h-full w-full object-cover   overflow-hidden">
                             <Image
                                 src={featuredPost?.banner}
-                                blurDataURL={'eCF6B#-:0JInxr?@s;nmIoWUIko1%NocRk.8xbIUaxR*^+s;RiWAWU'}
-                                layout="responsive"
+                                blurDataURL="VA7AsKPCwte[jgfzbpjXWGbKjUjVj^fmj=n@WIj;j;af"
                                 placeholder="blur"
+                                layout="responsive"
                                 width={464}
-                                height={210}
+                                height={230}
                                 objectFit="cover"
                                 objectPosition="bottom center"
                                 alt={featuredPost?.title}

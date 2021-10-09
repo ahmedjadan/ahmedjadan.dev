@@ -8,6 +8,7 @@ export const ProjectsData = {
       stacks: ['Nextjs', 'css modules', 'vercel'],
       href: 'https://corona-ar.vercel.app/',
       image: '/static/images/projects/corona.png',
+      details: '/coronaApp'
     },
     {
       title: 'E-commerce shop',
@@ -15,14 +16,16 @@ export const ProjectsData = {
       stacks: ['Nextjs', 'strapi', 'paypal', 'tailwindcss', 'netlify', 'heroku'],
       href: 'https://eldokkan.netlify.app/',
       image: '/static/images/projects/eldokkan.png',
+      details: '/eldokkan'
 
     },
     {
-      title: 'importable.io',
+      title: 'importable.net',
       description: `Simple landing page for small cooperate`,
-      stacks: ['Reactjs', 'css modules', 'netlify', 'firebase'],
-      href: 'https://importable.netlify.app/',
+      stacks: ['Nextjs', 'Tailwind css', 'vercel', 'sendGrid'],
+      href: 'https://importable.net/',
       image: '/static/images/projects/importable.png',
+      details: '/importable'
 
     },
     {
@@ -31,6 +34,7 @@ export const ProjectsData = {
       stacks: ['Nextjs', 'tailwindcss', 'mdx', 'i18n'],
       href: 'https://www.ahmedjadan.dev/',
       image: '/static/images/projects/ahmedjadan.png',
+      details: '/ahmedjadandev'
 
     },
   ],
@@ -41,6 +45,7 @@ export const ProjectsData = {
       stacks: ['Nextjs', 'css modules', 'vercel'],
       href: 'https://corona-ar.vercel.app/',
       image: '/static/images/projects/corona.png',
+      details: '/coronaApp'
 
     },
     {
@@ -49,14 +54,16 @@ export const ProjectsData = {
       stacks: ['Nextjs', 'strapi', 'paypal', 'tailwindcss', 'vercel', 'heroku'],
       href: 'https://eldokkan.vercel.app/',
       image: '/static/images/projects/eldokkan.png',
+      details: '/eldokkan'
 
     },
     {
-      title: 'importable.io | للاستيراد',
+      title: 'importable.net | للاستيراد',
       description: `Simple landing page for small cooperate`,
-      stacks: ['Reactjs', 'css modules', 'netlify', 'firebase'],
-      href: 'https://importable.netlify.app/',
+      stacks: ['Nextjs', 'Tailwind css', 'vercel', 'sendGrid'],
+      href: 'https://importable.net/',
       image: '/static/images/projects/importable.png',
+      details: '/importable'
 
     },
     {
@@ -65,6 +72,7 @@ export const ProjectsData = {
       stacks: ['Nextjs', 'tailwindcss', 'mdx', 'i18n'],
       href: 'https://www.ahmedjadan.dev/',
       image: '/static/images/projects/ahmedjadan.png',
+      details: '/ahmedjadandev'
 
     },
   ],
