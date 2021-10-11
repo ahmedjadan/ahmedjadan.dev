@@ -1,9 +1,12 @@
-import Layout from 'src/Layout/Layout';
+import ahmedjadandev from '/public/static/images/projects/ahmedjadan.dev.png';
+import ProjectsLayout from '/src/Layout/ProjectsLayout';
 
 export default function coronaApp() {
-    return (
-        <Layout>
-            this website 
-        </Layout>
-    )
+  return (
+    <ProjectsLayout
+      title="My Personal Website"
+      image={ahmedjadandev}
+      description="Frontend"
+    />
+  );
 }

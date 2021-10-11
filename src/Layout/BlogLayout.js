@@ -38,6 +38,7 @@ export default function BlogLayout({ children, frontMatter }) {
         title={frontMatterSlug?.title}
         description={frontMatterSlug?.summary}
         date={frontMatterSlug?.publishedAt}
+        keywords={frontMatterSlug.keywords}
       />
       <Layout>
         <div className="grid grid-cols-1 max-w-5xl mx-auto "  >
