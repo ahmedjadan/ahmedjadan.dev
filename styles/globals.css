@@ -3,8 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer components {
   .active {
     @apply flex max-w-full top-0 flex-col items-start dark:bg-[#242731] bg-indigo-100 transition duration-500 ease-in-out hover:translate-x-2 rounded-lg mt-2;

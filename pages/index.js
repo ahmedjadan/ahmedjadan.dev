@@ -44,7 +44,7 @@ export default function Home({ posts }) {
           {t('common:featured_posts')}
         </h1>
       </div>
-      <div className="max-w-5xl mx-auto py-5 rounded-md  ">
+      <div className="max-w-6xl mx-auto py-5 rounded-md  ">
         <div className="mx-auto grid md:grid-cols-6 grid-cols-1 gap-x-6  px-2">
           <FeaturedPost posts={posts} />
           <div className="w-full col-span-3">
@@ -55,7 +55,8 @@ export default function Home({ posts }) {
           </div>
         </div>
       </div>
-      <div className="mx-auto px-2 py-10 max-w-5xl ">
+      <ProjectCard />
+      <div className="mx-auto px-4 py-10 max-w-6xl ">
         <div className="py-4 ">
           <h1 className="text-lg font-bold text-indigo-500 dark:text-gray-200" >{t('common:repoTitle')} </h1>
         </div>
@@ -65,7 +66,6 @@ export default function Home({ posts }) {
           ))}
         </div>
       </div>
-      <ProjectCard />
     </Layout>
   );
 }

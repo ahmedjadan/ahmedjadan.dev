@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Tags from './Tags';
 import Theme from './Theme'
-import CodeSnippet from './CodeSnippet'
 
 const CustomLink = ({ href, ...rest }) => {
   const isInternalLink = href && href.startsWith('/')
@@ -28,7 +27,6 @@ const MDXComponents = {
   Tags,
   a: CustomLink,
   Theme,
-  CodeSnippet,
 };
 
 export default MDXComponents;

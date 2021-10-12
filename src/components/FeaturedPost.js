@@ -2,18 +2,19 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { parseISO, format } from 'date-fns';
-import { arSA } from 'date-fns/locale'
-
+import { arSA } from 'date-fns/locale';
+import { ArticlePlaceHolder } from './Placeholders/ArticlePlaceHolder';
 import Tags from '/src/components/Tags';
 
-
 export default function FeaturedPost({ posts }) {
-    const router = useRouter()
-    const { locale: activeLocale } = router
-    const dateFormat = activeLocale === 'ar' ? 'MMMM, dd, yyyy' : 'MMM, dd, yyyy'
+
+    const router = useRouter();
+    const { locale: activeLocale } = router;
+    const dateFormat = activeLocale === 'ar' ? 'MMMM, dd, yyyy' : 'MMM, dd, yyyy';
+
 
     const featuredPost = posts?.find((post) => post.featured !== false);
-
+    if (!featuredPost) return <ArticlePlaceHolder />
     return (
         <>
             <Link href={`/blog/${featuredPost?.slug}`}>
@@ -50,18 +51,44 @@ export default function FeaturedPost({ posts }) {
                             </div>
                             <div className="flex  items-center  space-x-2 pt-4 ">
                                 <div className="flex items-center ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4  ${activeLocale === 'ar' ? ' ml-1' : 'order-2 ml-2'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className={`h-4 w-4  ${activeLocale === 'ar' ? ' ml-1' : 'order-2 ml-2'
+                                            }`}
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                        />
                                     </svg>
-                                    <p
-                                        className="text-gray-600 dark:text-gray-500 text-xs">
-                                        {Math.ceil(featuredPost?.frontData?.readingTime.minutes.toFixed(2))} {activeLocale === 'ar' ? 'دقيقة قراءة' : 'min read'}
+                                    <p className="text-gray-600 dark:text-gray-500 text-xs">
+                                        {Math.ceil(
+                                            featuredPost?.frontData?.readingTime.minutes.toFixed(2)
+                                        )}{' '}
+                                        {activeLocale === 'ar' ? 'دقيقة قراءة' : 'min read'}
                                     </p>
                                 </div>
 
                                 <div className="flex items-center px-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4  ${activeLocale === 'ar' ? ' order-0 ml-2' : 'mr-2'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className={`h-4 w-4  ${activeLocale === 'ar' ? ' order-0 ml-2' : 'mr-2'
+                                            }`}
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                        />
                                     </svg>
                                     <div>
                                         <dl>
@@ -69,7 +96,9 @@ export default function FeaturedPost({ posts }) {
                                             <dd className="text-gray-600 dark:text-gray-500 text-xs">
                                                 <time>
                                                     {format(
-                                                        parseISO(featuredPost.publishedAt), dateFormat, { locale: activeLocale === 'ar' ? arSA : '' }
+                                                        parseISO(featuredPost.publishedAt),
+                                                        dateFormat,
+                                                        { locale: activeLocale === 'ar' ? arSA : '' }
                                                     )}
                                                 </time>
                                             </dd>
@@ -77,9 +106,9 @@ export default function FeaturedPost({ posts }) {
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
+
                 </a>
             </Link>
         </>

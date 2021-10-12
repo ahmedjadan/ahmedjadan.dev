@@ -1,12 +1,18 @@
 import ahmedjadandev from '/public/static/images/projects/ahmedjadan.dev.png';
-import ProjectsLayout from '/src/Layout/ProjectsLayout';
+import Layout from '/src/Layout/Layout'
+import PortfolioBanner from '/src/components/Portfolio/PortfolioBanner';
+
 
 export default function coronaApp() {
-  return (
-    <ProjectsLayout
-      title="My Personal Website"
-      image={ahmedjadandev}
-      description="Frontend"
-    />
-  );
+    return (
+
+        <Layout>
+            <PortfolioBanner
+                title="My Personal Website"
+                image={ahmedjadandev}
+                description="Frontend"
+                hashBlur="L14U{Uxy4,M@xvazM{k9NTW6xMs^"
+            />
+        </Layout>
+    );
 }

@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation'
 import { parseISO, format } from 'date-fns';
 import { arSA } from 'date-fns/locale'
+import ContentLoader, { Facebook } from 'react-content-loader'
 
 import Head from './Head';
 
@@ -14,10 +15,14 @@ export default function BlogPost({
   ogImage,
 
 }) {
+  const MyLoader = () => <ContentLoader />
+  const MyFacebookLoader = () => <Facebook />
   const router = useRouter()
   const { locale: activeLocale } = router
   const { t } = useTranslation()
-
+if(!title){
+  return MyFacebookLoader()
+}
   const dateFormat = activeLocale === 'ar' ? 'MMMM, dd, yyyy' : 'MMM, dd, yyyy'
   return (
     <>
@@ -34,7 +39,7 @@ export default function BlogPost({
               <dt className="sr-only"> نشر في :</dt>
               <dd className=" p-0  dark:text-gray-400 text-gray-600 items-center flex ">
                 <time>
-                  {format(parseISO(publishedAt), dateFormat, { locale: activeLocale === 'ar' ? arSA : '' } )}
+                  {format(parseISO(publishedAt), dateFormat, { locale: activeLocale === 'ar' ? arSA : '' })}
                 </time>
               </dd>
             </dl>

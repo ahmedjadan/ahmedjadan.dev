@@ -7,7 +7,7 @@ export const ProjectsData = {
       description: `Simple dashboard for monitoring the covid-19 data around the globe.`,
       stacks: ['Nextjs', 'css modules', 'vercel'],
       href: 'https://corona-ar.vercel.app/',
-      image: '/static/images/projects/corona.png',
+      image: '/static/images/projects/coronaApp.png',
       details: '/coronaApp'
     },
     {
@@ -24,16 +24,16 @@ export const ProjectsData = {
       description: `Simple landing page for small cooperate`,
       stacks: ['Nextjs', 'Tailwind css', 'vercel', 'sendGrid'],
       href: 'https://importable.net/',
-      image: '/static/images/projects/importable.png',
+      image: '/static/images/projects/eldokkan.png',
       details: '/importable'
 
     },
     {
-      title: 'This website',
+      title: 'Personal Website/Portfolio',
       description: `showcasing and blogging my development journey`,
       stacks: ['Nextjs', 'tailwindcss', 'mdx', 'i18n'],
       href: 'https://www.ahmedjadan.dev/',
-      image: '/static/images/projects/ahmedjadan.png',
+      image: '/static/images/projects/coronaApp.png',
       details: '/ahmedjadandev'
 
     },
@@ -44,13 +44,13 @@ export const ProjectsData = {
       description: `Simple dashboard for monitoring the covid-19 data around the globe.`,
       stacks: ['Nextjs', 'css modules', 'vercel'],
       href: 'https://corona-ar.vercel.app/',
-      image: '/static/images/projects/corona.png',
+      image: '/static/images/projects/coronaApp.png',
       details: '/coronaApp'
 
     },
     {
       title: 'متجر الكتروني',
-      description: `All functional e-commerce app.`,
+      description: `متجر الكتروني مصغر بكامل وظائف الشراء والدفع أون لاين`,
       stacks: ['Nextjs', 'strapi', 'paypal', 'tailwindcss', 'vercel', 'heroku'],
       href: 'https://eldokkan.vercel.app/',
       image: '/static/images/projects/eldokkan.png',
@@ -62,7 +62,7 @@ export const ProjectsData = {
       description: `Simple landing page for small cooperate`,
       stacks: ['Nextjs', 'Tailwind css', 'vercel', 'sendGrid'],
       href: 'https://importable.net/',
-      image: '/static/images/projects/importable.png',
+      image: '/static/images/projects/eldokkan.png',
       details: '/importable'
 
     },
@@ -71,7 +71,7 @@ export const ProjectsData = {
       description: `showcasing and blogging my development journey`,
       stacks: ['Nextjs', 'tailwindcss', 'mdx', 'i18n'],
       href: 'https://www.ahmedjadan.dev/',
-      image: '/static/images/projects/ahmedjadan.png',
+      image: '/static/images/projects/eldokkan.png',
       details: '/ahmedjadandev'
 
     },

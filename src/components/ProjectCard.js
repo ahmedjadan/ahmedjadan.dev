@@ -10,7 +10,7 @@ function ProjectCard() {
   const router = useRouter();
   const { locale } = router;
   return (
-    <div className="mx-auto px-2 py-16  max-w-5xl ">
+    <div className="mx-auto md:px-2 px-6 py-10  max-w-6xl ">
       <div className="py-2 ">
         <h1 className="text-lg font-bold text-indigo-600 dark:text-gray-200">
           {' '}
@@ -20,25 +20,25 @@ function ProjectCard() {
       </div>
       <h2 className="sr-only">projects</h2>
 
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-1 ">
+      <div className="grid md:grid-cols-4 grid-cols-1   gap-4">
         {ProjectsData[locale]?.map((project) => (
-          <Link href={`/portfolio${project.details}`} key={project.title}>
-            <a className=" relative p-2 group" key={project.title}>
-              <div className="grid grid-cols-4 p-1  group-hover:shadow-xl dark:bg-[#2427313d] rounded-md   transition duration-200 ease-in-out">
-                <div className="col-span-1 h-full w-full ">
+          <Link href={`/portfolio${project.details}`} key={project.title} className="">
+            <a className="h-full relative group" key={project.title}>
+              <div className=" h-full  group-hover:shadow-xl dark:bg-[#242731ce] bg-gray-100/80 rounded-md   transition duration-200 ease-in-out">
+                <div className="overflow-hidden "  >
                   <Image
                     src={project.image}
                     alt={project.title}
-                    width={190}
-                    height={170}
-                    objectFit="contain"
-                    objectPosition="bottom center"
+                    width={220}
+                    height={100}
+                    objectFit="cover"
+                    // objectPosition="bottom center"
                     layout="responsive"
-                    className="rounded-md min-h-full w-full "
+                    className="rounded-md h-full overflow-hidden "
                   />
                 </div>
 
-                <div className="col-span-3 px-4 relative ">
+                <div className="px-2 relative py-4  " >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className={`h-5 w-5 absolute ${locale === 'ar' ? 'left-2' : 'right-2'

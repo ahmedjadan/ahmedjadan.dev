@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <header className="py-8 z-50">
-      <nav className="md:flex items-center px-2  md:flex-row md:justify-between md:mx-auto mb-5 max-w-5xl w-full  flex-wrap bg-gray-50 dark:bg-[#1E2028] ">
+      <nav className="md:flex items-center px-2  md:flex-row md:justify-between md:mx-auto mb-5 max-w-6xl w-full  flex-wrap bg-gray-50 dark:bg-[#1E2028] ">
         <div className="flex items-center justify-between relative">
           <div className="flex items-center mr-4 md:mr-0 ml-4 justify-center">
             <Link href="/" prefetch={false} >

@@ -1,14 +1,20 @@
 import importable from '/public/static/images/projects/importable.net.png';
-import ProjectsLayout from '/src/Layout/ProjectsLayout';
 import useTranslation from 'next-translate/useTranslation';
+
+import Layout from '/src/Layout/Layout'
+import PortfolioBanner from '/src/components/Portfolio/PortfolioBanner';
 
 export default function coronaApp() {
     const { t } = useTranslation()
     return (
-        <ProjectsLayout
-            title={t("portfolio:importable")}
-            image={importable}
-            description="Frontend"
-        />
+
+        <Layout>
+            <PortfolioBanner
+                title={t("portfolio:importable")}
+                image={importable}
+                description="Frontend"
+                hashBlur="UOQT7YM_~p-=9Hxt?aIW01Ri%MtSx]j]RjWU"
+            />
+        </Layout>
     );
 }
