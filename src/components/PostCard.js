@@ -13,10 +13,10 @@ export default function PostCard({ title, slug, summary, tag, author, image, dat
     //console.log("PostCard ~ data", data)
     if (!data) return <ListArticles />
     return (
-        <Link href={`/blog/${data?.slug}`} className="group">
+        <Link href={`/blog/${data?.slug}`} className="group ">
             <a >
 
-                <div className="group grid grid-cols-4 rounded-md  dark:bg-[#2427313d] gap-3 relative mb-5 mt-4 md:mt-0 p-2">
+                <div className="group grid grid-cols-4 rounded-md  gap-3 relative py-4 md:mt-0 dark:bg-[#24273178]">
                     {/* <div className="col-span-1 h-20 w-20 rounded-md">
                         <Image
                             src={data?.banner}
@@ -29,7 +29,7 @@ export default function PostCard({ title, slug, summary, tag, author, image, dat
                             className="rounded-md  " />
                     </div> */}
 
-                    <div className="col-span-4   ">
+                    <div className="col-span-4 ">
 
                         <h1 className="group-hover:text-indigo-500 text-gray-600 dark:text-gray-200 md:text-lg text-base font-bold md:leading-9  transition duration-300 ease-in-out"> {data?.title}</h1>
                         <p className="md:text-base text-sm text-gray-600 dark:text-gray-300 py-1 "> {data?.summary} </p>

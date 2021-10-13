@@ -5,13 +5,13 @@ import React from 'react';
 const Navbar = dynamic(() => import('src/components/Navbar'))
 
 
- function Layout({ children }) {
+function Layout({ children }) {
   const router = useRouter()
   const { locale } = router
   return (
     <>
       <div
-        className={`grid min-h-screen mx-auto  ${locale === 'ar' ? 'font-cairo' : 'font-Inter'}`}
+        className={`grid min-h-screen mx-auto  ${locale === 'ar' ? 'font-cairo' : 'font-Roboto'}`}
         style={{
           gridTemplateRows: 'auto 1fr auto',
         }}

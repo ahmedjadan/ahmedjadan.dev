@@ -10,7 +10,10 @@ export default function Theme() {
 
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true)
+    setTheme('dark')
+  }, []);
 
   return (
     <div className="flex items-center justify-between  px-2" >
@@ -18,7 +21,7 @@ export default function Theme() {
         aria-label="Toggle Dark Mode"
         type="button"
         className={`rounded  h-5 w-5 mx-2`}
-        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       >
         {mounted && (
           <svg

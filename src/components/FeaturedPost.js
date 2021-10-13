@@ -18,9 +18,9 @@ export default function FeaturedPost({ posts }) {
     return (
         <>
             <Link href={`/blog/${featuredPost?.slug}`}>
-                <a className="grid col-span-3 group dark:bg-[#242731a1] mb-8 rounded-md">
+                <a className="grid col-span-3 group  rounded-md">
                     <div className="grid col-span-2 ">
-                        <div className=" bg-cover bg-center h-full w-full object-cover   overflow-hidden">
+                        <div className=" bg-cover bg-center  object-cover   overflow-hidden">
                             <Image
                                 src={featuredPost?.banner}
                                 blurDataURL="VA7AsKPCwte[jgfzbpjXWGbKjUjVj^fmj=n@WIj;j;af"
@@ -34,7 +34,7 @@ export default function FeaturedPost({ posts }) {
                                 className="object-cover bg-center  bg-contain rounded-t-md min-w-full overflow-hidden  "
                             />
                         </div>
-                        <div className="mt-4 px-2 pb-4">
+                        <div className="mt-4 px-2 pb-4 h-full">
                             <Tags tag1={featuredPost?.tag1} tag2={featuredPost?.tag2} />
                             <div className="py-1">
                                 <h1 className="text-2xl font-bold text-gray-700 dark:text-gray-200 group-hover:text-indigo-500 transition duration-300 ease-in-out">

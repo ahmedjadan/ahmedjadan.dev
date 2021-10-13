@@ -7,10 +7,12 @@ module.exports = {
       fontFamily: {
         cairo: ['Cairo'],
         Inter: ['Inter'],
+        Roboto: ['Roboto'],
       },
       boxShadow: {
         mdb: '0px 20px  hsla(0,0%,100%,0.1)',
-        indigo: '0 15px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);'
+        indigo:
+          '0 15px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);',
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -22,15 +24,18 @@ module.exports = {
         },
       }),
       //images
-      backgroundImage: theme => ({
+      backgroundImage: (theme) => ({
         'blog-pattern': "url('/static/blogging.svg')",
         'project-pattern': "url('/static/cv.svg')",
-      })
+      }),
     },
   },
   variants: {
     extend: {},
   },
 
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 };

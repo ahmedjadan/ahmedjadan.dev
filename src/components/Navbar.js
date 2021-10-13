@@ -34,9 +34,9 @@ export default function Navbar() {
           <div className="flex items-center mr-4 md:mr-0 ml-4 justify-center">
             <Link href="/" prefetch={false} >
               <a
-                className="ml-0 md:ml-0 flex items-center justify-center "
+                className="ml-0 md:ml-0 flex items-center text-center justify-center w-12 h-12  ring-1 ring-indigo-800 rounded-full  "
               >
-                <div className="rounded-lg w-[38px] h-[38px]  ring-1 ring-indigo-300">
+                {/* <div className="rounded-lg w-[38px] h-[38px]  ring-1 ring-indigo-300">
                   <Image
                     alt="Ahmed jadan"
                     height={38}
@@ -47,9 +47,10 @@ export default function Navbar() {
                     priority
                     className="rounded-lg z-50"
                   />
-                </div>
-                <span className={`font-semibold group md:text-xl relative sm:text-sm text-indigo-600 dark:text-gray-200 ${activeLocale === 'ar' ? 'mr-3' : 'ml-3'}`}>
-                  {t('common:name')}
+                </div> */}
+                <span className={`font-bold group text-4xl font-Roboto  relative  text-indigo-600 dark:text-gray-200`}>
+                  {/* {t('common:name')} */}
+                  AJ.
 
                 </span>
 
