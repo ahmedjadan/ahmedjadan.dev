@@ -3,21 +3,24 @@
 export const ProjectsData = {
   en: [
     {
-      title: 'Corona Dashboard',
-      description: `Simple dashboard for monitoring the covid-19 data around the globe.`,
-      stacks: ['Nextjs', 'css modules', 'vercel'],
-      href: 'https://corona-ar.vercel.app/',
-      image: '/static/images/projects/coronaApp.png',
-      details: '/coronaApp'
-    },
-    {
       title: 'E-commerce shop',
       description: `All functional e-commerce app.`,
       stacks: ['Nextjs', 'strapi', 'paypal', 'tailwindcss', 'netlify', 'heroku'],
       href: 'https://eldokkan.netlify.app/',
       image: '/static/images/projects/eldokkan.png',
-      details: '/eldokkan'
-
+      details: '/eldokkan',
+      hashBlur: "UER3TY4T~q~qIVIUtQ-;_Mx]D%M__M?bM{4n",
+      featured: true
+    },
+    {
+      title: 'Corona Dashboard',
+      description: `Simple dashboard for monitoring the covid-19 data around the globe.`,
+      stacks: ['Nextjs', 'css modules', 'vercel'],
+      href: 'https://corona-ar.vercel.app/',
+      image: '/static/images/projects/coronaApp.png',
+      hashBlur: "UER3TY4T~q~qIVIUtQ-;_Mx]D%M__M?bM{4n",
+      details: '/coronaApp',
+      featured: false
     },
     {
       title: 'importable.net',
@@ -25,8 +28,9 @@ export const ProjectsData = {
       stacks: ['Nextjs', 'Tailwind css', 'vercel', 'sendGrid'],
       href: 'https://importable.net/',
       image: '/static/images/projects/eldokkan.png',
-      details: '/importable'
-
+      details: '/importable',
+      hashBlur: "UER3TY4T~q~qIVIUtQ-;_Mx]D%M__M?bM{4n",
+      featured: false
     },
     {
       title: 'Personal Website/Portfolio',
@@ -34,28 +38,31 @@ export const ProjectsData = {
       stacks: ['Nextjs', 'tailwindcss', 'mdx', 'i18n'],
       href: 'https://www.ahmedjadan.dev/',
       image: '/static/images/projects/coronaApp.png',
-      details: '/ahmedjadandev'
-
+      details: '/ahmedjadandev',
+      hashBlur: "UER3TY4T~q~qIVIUtQ-;_Mx]D%M__M?bM{4n",
+      featured: false
     },
   ],
   ar: [
-    {
-      title: 'منصة كورونا بالعربي',
-      description: `Simple dashboard for monitoring the covid-19 data around the globe.`,
-      stacks: ['Nextjs', 'css modules', 'vercel'],
-      href: 'https://corona-ar.vercel.app/',
-      image: '/static/images/projects/coronaApp.png',
-      details: '/coronaApp'
-
-    },
     {
       title: 'متجر الكتروني',
       description: `متجر الكتروني مصغر بكامل وظائف الشراء والدفع أون لاين`,
       stacks: ['Nextjs', 'strapi', 'paypal', 'tailwindcss', 'vercel', 'heroku'],
       href: 'https://eldokkan.vercel.app/',
       image: '/static/images/projects/eldokkan.png',
-      details: '/eldokkan'
-
+      details: '/eldokkan',
+      hashBlur: "UER3TY4T~q~qIVIUtQ-;_Mx]D%M__M?bM{4n",
+      featured: true
+    },
+    {
+      title: 'منصة كورونا بالعربي',
+      description: `Simple dashboard for monitoring the covid-19 data around the globe.`,
+      stacks: ['Nextjs', 'css modules', 'vercel'],
+      href: 'https://corona-ar.vercel.app/',
+      image: '/static/images/projects/coronaApp.png',
+      details: '/coronaApp',
+      hashBlur: "UER3TY4T~q~qIVIUtQ-;_Mx]D%M__M?bM{4n",
+      featured: false
     },
     {
       title: 'importable.net | للاستيراد',
@@ -63,8 +70,9 @@ export const ProjectsData = {
       stacks: ['Nextjs', 'Tailwind css', 'vercel', 'sendGrid'],
       href: 'https://importable.net/',
       image: '/static/images/projects/eldokkan.png',
-      details: '/importable'
-
+      details: '/importable',
+      hashBlur: "UER3TY4T~q~qIVIUtQ-;_Mx]D%M__M?bM{4n",
+      featured: false
     },
     {
       title: 'موقعي الشخصي',
@@ -72,8 +80,9 @@ export const ProjectsData = {
       stacks: ['Nextjs', 'tailwindcss', 'mdx', 'i18n'],
       href: 'https://www.ahmedjadan.dev/',
       image: '/static/images/projects/eldokkan.png',
-      details: '/ahmedjadandev'
-
+      details: '/ahmedjadandev',
+      hashBlur: "UER3TY4T~q~qIVIUtQ-;_Mx]D%M__M?bM{4n",
+      featured: false
     },
   ],
 }

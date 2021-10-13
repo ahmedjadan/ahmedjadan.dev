@@ -39,7 +39,7 @@ export default function Home({ posts }) {
       <InfoCard />
 
       <div className="mx-auto max-w-7xl">
-        <h1 className="dark:text-gray-200 p-3 text-xl font-bold">
+        <h1 className="text-lg md:text-3xl font-bold text-gray-700 dark:text-gray-200">
           {' '}
           {t('common:featured_posts')}
         </h1>
@@ -59,7 +59,7 @@ export default function Home({ posts }) {
       </div>
       <div className="mx-auto px-4  max-w-7xl md:py-16 py-8">
         <div className="py-6 ">
-          <h1 className="text-lg md:text-3xl font-bold text-indigo-500 dark:text-gray-200" >{t('common:repoTitle')} </h1>
+          <h1 className="text-lg md:text-3xl font-bold text-gray-700 dark:text-gray-200" >{t('common:repoTitle')} </h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3  gap-4">
           {pinnedItems?.map((item, idx) => (

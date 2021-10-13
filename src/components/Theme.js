@@ -12,7 +12,7 @@ export default function Theme() {
   const { theme, setTheme } = useTheme();
   useEffect(() => {
     setMounted(true)
-    setTheme('dark')
+    // setTheme('dark')
   }, []);
 
   return (
@@ -21,7 +21,7 @@ export default function Theme() {
         aria-label="Toggle Dark Mode"
         type="button"
         className={`rounded  h-5 w-5 mx-2`}
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       >
         {mounted && (
           <svg

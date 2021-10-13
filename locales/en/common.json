@@ -16,6 +16,8 @@
   "repoTitle": "Pinned Repositories",
   "repoSub": "Contributing to Open Source, one Pin at a time",
   "404bigText": "Sorry we couldn't find this page.",
-  "404backButton": "Back to homepage"
-
+  "404backButton": "Back to homepage",
+  "seeAllProjects": "See all projects",
+  "moreDetails": "More details",
+  "liveDemo": "Live Demo"
 }

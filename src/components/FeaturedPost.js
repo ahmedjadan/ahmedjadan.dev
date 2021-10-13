@@ -66,7 +66,7 @@ export default function FeaturedPost({ posts }) {
                                             d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                                         />
                                     </svg>
-                                    <p className="text-gray-600 dark:text-gray-500 text-xs">
+                                    <p className="text-gray-600 dark:text-gray-500 text-sm">
                                         {Math.ceil(
                                             featuredPost?.frontData?.readingTime.minutes.toFixed(2)
                                         )}{' '}
@@ -93,7 +93,7 @@ export default function FeaturedPost({ posts }) {
                                     <div>
                                         <dl>
                                             <dt className="sr-only"> نشر في :</dt>
-                                            <dd className="text-gray-600 dark:text-gray-500 text-xs">
+                                            <dd className="text-gray-600 dark:text-gray-500 text-sm">
                                                 <time>
                                                     {format(
                                                         parseISO(featuredPost.publishedAt),
