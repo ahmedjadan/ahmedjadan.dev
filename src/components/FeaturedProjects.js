@@ -20,13 +20,10 @@ function FeaturedProjects() {
           {t('common:portfolio')}{' '}
         </h1>
       </div>
-      <div className=" bg-gray-200/50 dark:bg-[#242731a1] rounded-md h-full">
-        <div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-x-1 relative"
-          key={featured.title}
-        >
-          <div className="flex flex-col items-start justify-center relative md:p-8 p-4  ">
-            <div className="py-6">
+      <div className=" bg-gray-200/50 dark:bg-[#242731a1] rounded-md">
+        <div className="flex lg:justify-between flex-col md:flex-row  relative ">
+          <div className=" relative flex-1 order-2  px-4 py-8">
+            <div className="py-4">
               <h1 className="group-hover:text-indigo-500 text-gray-600 dark:text-gray-200 md:text-4xl text-base font-bold md:leading-9  transition duration-300 ease-in-out">
                 {featured.title}
               </h1>
@@ -35,7 +32,7 @@ function FeaturedProjects() {
               {featured.description}{' '}
             </p>
             <div>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300 pt-2">
                 stack:
                 <span className="dark:bg-[#24273194] text-indigo-400 dark:text-gray-400 text-sm  mx-0.5 px-1 py-[2px] rounded">
                   {featured.stacks.join(', ')}{' '}
@@ -45,13 +42,13 @@ function FeaturedProjects() {
             <div className=" flex items-center space-x-2 pt-4">
               <Link href={`/portfolio`}>
                 <a>
-                  <div className="flex items-center dark:text-gray-200 dark:hover:text-gray-300 text-gray-500 hover:text-gray-700 transition-all ">
+                  <div className="flex items-center pt-4 dark:text-gray-200 dark:hover:text-gray-300 text-gray-500 hover:text-gray-700 transition-all ">
                     <div className={`${locale === 'ar' ? 'pl-2' : 'pr-2'}`}>
                       <h1>{t('common:seeAllProjects')}</h1>
                     </div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
+                      className="h-6 w-6 animate-pulse"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                     >
@@ -74,7 +71,7 @@ function FeaturedProjects() {
               </Link>
             </div>
           </div>
-          <div className="object-cover  aspect-w-2 aspect-h-1 ">
+          <div className="object-cover flex-1 order-1 h-full">
             <Link href={`/portfolio${featured.details}`}>
               <a>
                 <Image
@@ -82,8 +79,8 @@ function FeaturedProjects() {
                   layout="responsive"
                   placeholder="blur"
                   blurDataURL={featured.hashBlur}
-                  width={640}
-                  height={318}
+                  width={1230}
+                  height={630}
                   objectFit="cover"
                   objectPosition="50% 50%"
                   className="rounded-md object-cover opacity-90 hover:opacity-100 transition-all w-full absolute -left-12 "

@@ -26,8 +26,8 @@ export default function FeaturedPost({ posts }) {
                                 blurDataURL="VA7AsKPCwte[jgfzbpjXWGbKjUjVj^fmj=n@WIj;j;af"
                                 placeholder="blur"
                                 layout="responsive"
-                                width={464}
-                                height={230}
+                                width={1200}
+                                height={630}
                                 objectFit="cover"
                                 objectPosition="bottom center"
                                 alt={featuredPost?.title}
