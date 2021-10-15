@@ -38,18 +38,17 @@ export default function Home({ posts }) {
       />
       <InfoCard />
 
-      <div className="mx-auto max-w-7xl">
-        <h1 className="text-lg md:text-3xl font-bold text-gray-700 dark:text-gray-200">
-          {' '}
-          {t('common:featured_posts')}
+      <div className="max-w-7xl mx-auto py-5 px-4">
+        <div className="py-4 ">
+        <h1 className="text-lg md:text-3xl pb-2 font-bold text-gray-700 dark:text-gray-200">
+        {t('common:featured_posts')}
         </h1>
       </div>
-      <div className="max-w-7xl mx-auto py-5  px-2">
         <div className="mx-auto grid md:grid-cols-6 grid-cols-1 gap-x-6 bg-gray-100/50 dark:bg-[#242731a1] rounded-md ">
           <div className="col-span-3">
             <FeaturedPost posts={posts} />
           </div>
-          <div className=" col-span-3   p-4">
+          <div className=" col-span-3 p-4">
             {sortedBlogs &&
               sortedBlogs.map((data, idx) => (
                 <PostCard data={data} key={idx} />
@@ -57,6 +56,7 @@ export default function Home({ posts }) {
           </div>
         </div>
       </div>
+      <FeaturedProjects />
       <div className="mx-auto px-4  max-w-7xl md:py-16 py-8">
         <div className="py-6 ">
           <h1 className="text-lg md:text-3xl font-bold text-gray-700 dark:text-gray-200" >{t('common:repoTitle')} </h1>
@@ -67,7 +67,6 @@ export default function Home({ posts }) {
           ))}
         </div>
       </div>
-      <FeaturedProjects />
     </Layout>
   );
 }

@@ -14,15 +14,16 @@ function FeaturedProjects() {
     (project) => project.featured !== false
   );
   return (
-    <div className="mx-auto  px-4 py-16  max-w-7xl  ">
-      <div className="py-6 ">
+    <div className="mx-auto px-4 py-16  max-w-7xl  ">
+      <div className="py-4 ">
         <h1 className="text-lg md:text-3xl pb-2 font-bold text-gray-700 dark:text-gray-200">
           {t('common:portfolio')}{' '}
         </h1>
       </div>
       <div className=" bg-gray-200/50 dark:bg-[#242731a1] rounded-md">
         <div className="flex lg:justify-between flex-col md:flex-row  relative ">
-          <div className=" relative flex-1 order-2  px-4 py-8">
+
+          <div className=" relative flex-1 order-2 md:order-1 px-4 py-8">
             <div className="py-4">
               <h1 className="group-hover:text-indigo-500 text-gray-600 dark:text-gray-200 md:text-4xl text-base font-bold md:leading-9  transition duration-300 ease-in-out">
                 {featured.title}
@@ -71,7 +72,7 @@ function FeaturedProjects() {
               </Link>
             </div>
           </div>
-          <div className="object-cover flex-1 order-1 h-full">
+          <div className="object-cover flex-1 order-1 md:order-2 h-full">
             <Link href={`/portfolio${featured.details}`}>
               <a>
                 <Image

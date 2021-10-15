@@ -44,7 +44,7 @@ export default function BlogLayout({ children, frontMatter }) {
         <div className="grid grid-cols-1 max-w-5xl mx-auto "  >
           <div
 
-            className={`w-full  my-4 py-4 px-2 rounded-lg bg-gradient-to-r  mx-auto ${classes} dark:text-gray-100 dark:from-gray-900 dark:to-gray-900 dark:via-gray-800  `}
+            className={`w-full  my-4 py-4 px-2 bg-gradient-to-r  mx-auto ${classes} dark:text-gray-100 dark:from-gray-900 dark:to-gray-900 dark:via-gray-800  `}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +124,7 @@ export default function BlogLayout({ children, frontMatter }) {
               </div>
             </article>
           </div>
-          <div className="prose  dark:prose-dark  mt-5 max-w-4xl w-full text-gray-600 px-0 mx-auto dark:text-gray-200 md:text-lg ">
+          <div className="prose  dark:prose-dark  mt-5 max-w-4xl w-full text-gray-600  mx-auto dark:text-gray-200 md:text-lg ">
             {children}
           </div>
 

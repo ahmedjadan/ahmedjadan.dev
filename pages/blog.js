@@ -22,7 +22,7 @@ function Blog({ posts }) {
       <Head title={t('common:blog')} />
       <Layout>
         <div className="my-10">
-          <div className=" py-6 xs:px-8 max-w-4xl mx-auto ">
+          <div className=" py-6 px-1 max-w-4xl mx-auto ">
             <div className="flex items-center justify-center flex-col space-y-6">
               <div className="rounded-full w-20 h-20  bg-gray-200/50 dark:bg-[#242731] text-4xl text-center  flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -40,7 +40,7 @@ function Blog({ posts }) {
             </div>
           </div>
         </div>
-        <div className="">
+        <div className="px-2">
           {sortedPosts?.map((frontMatter, idx) => (
             <BlogPost key={idx} {...frontMatter} />
           ))}

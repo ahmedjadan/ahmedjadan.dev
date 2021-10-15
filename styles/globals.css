@@ -41,10 +41,15 @@ ol {
   text-align: right;
   border-left: none;
   border-right: 0.25rem solid #e5e7eb;
-  padding-right: 1em;
+  padding-right: 0.6em;
   quotes: '\201D''\201E';
   font-weight: 500;
   font-style: italic;
+  margin-right: 19px;
+}
+[dir='ltr'] .prose blockquote {
+  margin-left: 19px;
+  padding-left: 0.6em;
 }
 html {
   scroll-behavior: smooth;
@@ -76,19 +81,19 @@ body {
   @apply dark:border-gray-600;
 }
 .prose h1 {
-  @apply text-gray-700 dark:text-gray-200 px-2;
+  @apply text-gray-700 dark:text-gray-200 px-3;
 }
 .prose h2 {
-  @apply text-gray-700 dark:text-gray-200 px-2;
+  @apply text-gray-700 dark:text-gray-200 px-3;
 }
 .prose h3 {
-  @apply text-gray-700 dark:text-gray-200 px-2;
+  @apply text-gray-700 dark:text-gray-200 px-3;
 }
 .prose h4 {
-  @apply text-gray-700 dark:text-gray-200 px-2;
+  @apply text-gray-700 dark:text-gray-200 px-3;
 }
 .prose p {
-  @apply text-gray-700 dark:text-gray-300 px-2;
+  @apply text-gray-700 dark:text-gray-300 px-3;
 }
 .prose em {
   @apply text-gray-800 dark:text-gray-300;
