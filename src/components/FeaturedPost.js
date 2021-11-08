@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { parseISO, format } from 'date-fns';
 import { arSA } from 'date-fns/locale';
-import { ArticlePlaceHolder } from './Placeholders/ArticlePlaceHolder';
 import Tags from '/src/components/Tags';
 
 export default function FeaturedPost({ posts }) {
@@ -14,7 +13,6 @@ export default function FeaturedPost({ posts }) {
 
 
     const featuredPost = posts?.find((post) => post.featured !== false);
-    if (!featuredPost) return <ArticlePlaceHolder />
     return (
         <>
             <Link href={`/blog/${featuredPost?.slug}`}>

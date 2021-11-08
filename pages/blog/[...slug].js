@@ -1,4 +1,3 @@
-import dynamic from 'next/dynamic'
 import hydrate from 'next-mdx-remote/hydrate';
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '/lib/mdx';
 import MDXComponents from 'src/components/MDXComponents';

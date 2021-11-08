@@ -28,7 +28,7 @@ export default function Home({ posts }) {
       (a, b) =>
         Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))
     .filter((p) => p.featured === false)
-    .slice(0, 3);
+    .slice(0, 4);
 
   return (
     <Layout>

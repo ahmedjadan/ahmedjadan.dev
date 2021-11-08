@@ -9,12 +9,14 @@ export default function coronaApp({ title, image, description, link }) {
 
     return (
         <Layout>
-            <PortfolioBanner
-                title={t('portfolio:coronaApp')}
-                image={coronaAppImage}
-                description={description}
-                hashBlur="U04B:]WE4.oys.bIWUe.nia#W.aynioKW;S3"
-            />
+            <>
+                <PortfolioBanner
+                    title={t('portfolio:coronaApp')}
+                    image={coronaAppImage}
+                    description={description}
+                    hashBlur="U04B:]WE4.oys.bIWUe.nia#W.aynioKW;S3"
+                />
+            </>
         </Layout>
     );
 }

@@ -7,6 +7,8 @@ export default function PortfolioBanner({
     link,
     hashBlur,
     children,
+    longDescription,
+    useCase
 }) {
     return (
         <div className="max-w-6xl mx-auto px-2">
@@ -22,14 +24,28 @@ export default function PortfolioBanner({
                     blurDataURL={hashBlur}
                     placeholder="blur"
                     layout="responsive"
-                    width={464}
-                    height={230}
+                    width={1230}
+                    height={630}
                     objectFit="cover"
-                    objectPosition="top center"
+                    objectPosition="50% 50%"
                     className="rounded-lg   "
                     title={title}
                 />
             </div>
+            <div className="pt-8 mt-12 grid grid-rows-4 grid-cols-4 gap-4 outline-black
+            
+            
+            
+            
+            
+            
+            ">
+                <div className="col-start-2 col-span-2 bg-gray-300 p-4 outline-black">responsive</div>
+                <div className=" row-span-2 row-start-1 row-end-4 col-start-1 col-end-1 bg-purple-300 ">welcome</div>
+                <div className="col-start-2 col-end-5 bg-indigo-300 p-4 row-start-2 row-end-4"> hello</div>
+                <div className="col-start-4 col-end-5 bg-red-300 ">four</div>
+            </div>
+            
         </div>
     );
 }

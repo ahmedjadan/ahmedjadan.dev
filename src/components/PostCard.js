@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image';
 import { parseISO, format } from 'date-fns';
 import { useRouter } from 'next/router';
-import { ListArticles } from './Placeholders/ArticlePlaceHolder';
 
 import { arSA } from 'date-fns/locale'
 export default function PostCard({ title, slug, summary, tag, author, image, data }) {
@@ -10,8 +9,6 @@ export default function PostCard({ title, slug, summary, tag, author, image, dat
 
     const { locale: activeLocale } = router
     const dateFormat = activeLocale === 'ar' ? 'MMMM, dd, yyyy' : 'MMM, dd, yyyy'
-    //console.log("PostCard ~ data", data)
-    if (!data) return <ListArticles />
     return (
         <Link href={`/blog/${data?.slug}`} className="group ">
             <a >

@@ -36,7 +36,25 @@
 ol {
   @apply px-6;
 }
+[dir='rtl'] .info-box {
+  border-right: 8px solid #A5B4FC;
+  text-align: right;
+}
+[dir='ltr'] .info-box {
+  border-left: 8px solid #A5B4FC;
+  text-align: left;
+}
 
+[dir='ltr'] .info-box__icon {
+  position: absolute;
+  left: -14px;
+  top: -10px;
+}
+[dir='rtl'] .info-box__icon {
+  position: absolute;
+  right: -14px;
+  top: -10px;
+}
 [dir='rtl'] .prose blockquote {
   text-align: right;
   border-left: none;

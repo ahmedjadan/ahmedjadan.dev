@@ -21,10 +21,6 @@ export default function ErrorPage() {
     </Layout>
   );
 }
-   
-<h1>Hello World!</h1>
-
-console.log('Hello world!')
 
 
 
