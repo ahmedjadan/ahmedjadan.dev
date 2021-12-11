@@ -1,6 +1,8 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.js', './src/components/**/*.js', './src/Layout/*.js'],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}", './src/Layout/*.js'
+  ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
@@ -34,8 +36,5 @@ module.exports = {
     extend: {},
   },
 
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
-  ],
+  plugins: [require('@tailwindcss/typography'),],
 };

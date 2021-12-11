@@ -34,7 +34,7 @@ export default function Projects() {
                     <div className=" text-sm md:text-base dark:text-gray-200 dark:hover:text-gray-300 text-gray-500 hover:text-gray-700 transition-all">
                       <Link href={`portfolio/${project.details}`}>
                         <a className="flex items-center">
-                          <h3 className={`${locale === 'ar' ? 'pl-2' : 'pr-2'}`}>{t('common:moreDetails')}</h3>
+                          <h3 className="rtl:pl-2 ltr:pr-2">{t('common:moreDetails')}</h3>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-6 w-6"
