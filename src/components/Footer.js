@@ -7,6 +7,9 @@ export default function Footer() {
     const now = new Date();
     return now.getFullYear();
   }, []);
+
+  
+  
   return (
     <footer>
       <div className="mt-10  ">

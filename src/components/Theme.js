@@ -1,23 +1,24 @@
 import { useState, useEffect } from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
 import { useTheme } from 'next-themes';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 export default function Theme() {
-  const router = useRouter()
-  const { locales, locale: activeLocale } = router
-  const otherLocales = locales.filter((locale) => locale !== activeLocale)
+  const router = useRouter();
+  const { locales, locale: activeLocale } = router;
+  const otherLocales = locales.filter((locale) => locale !== activeLocale);
 
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   useEffect(() => {
-    setMounted(true)
+    setMounted(true);
     // setTheme('dark')
   }, []);
 
   return (
-    <div className="flex items-center justify-between  px-2" >
-      <button style={{ outline: 'none' }}
+    <div className="flex items-center justify-between  px-2">
+      <button
+        style={{ outline: 'none' }}
         aria-label="Toggle Dark Mode"
         type="button"
         className={`rounded  h-5 w-5 mx-2`}
@@ -51,14 +52,25 @@ export default function Theme() {
       </button>
       <div className="px-2">
         {otherLocales.map((locale) => {
-          const { pathname, query, asPath } = router
+          const { pathname, query, asPath } = router;
           return (
-            <Link href={{ pathname, query }} as={asPath} locale={locale} key={locale}>
-              <a className={`text-gray-700 dark:text-gray-100 text-sm ${locale === 'en' ? '' : ''}`}>{locale === "ar" ? 'AR' : 'EN'} </a>
+            <Link
+              href={{ pathname, query }}
+              as={asPath}
+              locale={locale}
+              key={locale}
+            >
+              <a
+                className={`text-gray-700 dark:text-gray-100 text-sm ${
+                  locale === 'en' ? '' : ''
+                }`}
+              >
+                {locale === 'ar' ? 'AR' : 'EN'}{' '}
+              </a>
             </Link>
-          )
-        })}      </div>
-
+          );
+        })}{' '}
+      </div>
     </div>
   );
 }
