@@ -34,7 +34,7 @@ export default function BlogLayout({ children, frontMatter }) {
     <>
       <ScrollBar bgClassNames={frontMatterSlug?.hero} />
       <Head
-        image={`https://www.ahmedjadan.dev/${frontMatterSlug?.banner}`}
+        image={`https://www.ahmedjadan.dev${frontMatterSlug?.banner}`}
         title={frontMatterSlug?.title}
         description={frontMatterSlug?.summary}
         date={frontMatterSlug?.publishedAt}
