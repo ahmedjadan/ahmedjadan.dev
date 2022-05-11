@@ -28,7 +28,6 @@ export default function PortfolioBanner({
           height={630}
           objectFit="cover"
           objectPosition="50% 50%"
-          className="rounded-lg   "
           title={title}
         />
       </div>

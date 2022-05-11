@@ -28,27 +28,15 @@ export default function Navbar() {
 
   return (
     <header className="py-8 z-50">
-      <nav className="md:flex items-center px-2  md:flex-row md:justify-between md:mx-auto mb-5 max-w-7xl w-full  flex-wrap bg-gray-50 dark:bg-[#1E2028] ">
+      <nav className="md:flex items-center px-2  md:flex-row md:justify-between md:mx-auto mb-5 max-w-5xl w-full  flex-wrap bg-gray-50 dark:bg-[#1E2028] ">
         <div className="flex items-center justify-between relative">
           <div className="flex items-center mr-4 md:mr-0 ml-4 justify-center">
             <Link href="/" prefetch={false}>
               <a className="ml-0 md:ml-0 flex items-center text-center justify-center w-12 h-12  rounded-full  ">
-                {/* <div className="rounded-lg w-[38px] h-[38px]  ring-1 ring-indigo-300">
-                  <Image
-                    alt="Ahmed jadan"
-                    height={38}
-                    layout="responsive"
-                    objectFit="cover"
-                    width={38}
-                    src={Ahmed}
-                    priority
-                    className="rounded-lg z-50"
-                  />
-                </div> */}
+                
                 <span
                   className={`font-bold group text-4xl font-Roboto relative  text-indigo-600 dark:text-indigo-400`}
                 >
-                  {/* {t('common:name')} */}
                   AJ.
                 </span>
               </a>

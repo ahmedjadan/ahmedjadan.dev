@@ -10,13 +10,20 @@ export default function ScrollBar({ bgClassNames }) {
     let scrollPercentRounded = Math.round(scrollPercent * 100);
     setWidth(scrollPercentRounded);
   };
-
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+    console.log(
+      (window.scrollY /
+        (document.body.scrollHeight - window.innerHeight)) *
+        100
+    );
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+    
   });
+
+  
   let classes = '';
   bgClassNames == 'indigo'
     ? (classes += 'from-indigo-100 to-indigo-200 ')

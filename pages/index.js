@@ -28,7 +28,7 @@ export default function Home({ posts }) {
       (a, b) =>
         Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))
     .filter((p) => p.featured === false)
-    .slice(0, 4);
+    .slice(0, 3);
 
   return (
     <Layout>
@@ -38,7 +38,7 @@ export default function Home({ posts }) {
       />
       <InfoCard />
 
-      <div className="max-w-7xl mx-auto py-5 px-4">
+      <div className="max-w-5xl mx-auto py-5 px-4">
         <div className="py-4 ">
         <h1 className="text-lg md:text-3xl pb-2 font-bold text-gray-700 dark:text-gray-200">
         {t('common:featured_posts')}
@@ -57,7 +57,7 @@ export default function Home({ posts }) {
         </div>
       </div>
       <FeaturedProjects />
-      <div className="mx-auto px-4  max-w-7xl md:py-16 py-8">
+      <div className="mx-auto px-4  max-w-5xl md:py-16 py-8">
         <div className="py-6 ">
           <h1 className="text-lg md:text-3xl font-bold text-gray-700 dark:text-gray-200" >{t('common:repoTitle')} </h1>
         </div>
